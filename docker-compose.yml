@@ -5,49 +5,43 @@ services:
     environment:
       POSTGRES_DB: dd_manager
       POSTGRES_USER: dnd_user
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-dev-only-change-me}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-dnd_password}
     volumes:
       - dnd_postgres_data:/var/lib/postgresql/data
-    networks:
-      - dnd_internal
     restart: unless-stopped
 
   backend:
     build:
-      context: ./backend/D-Dmenager
+      context: ./backend
+      dockerfile: Dockerfile
     container_name: dnd-backend
     depends_on:
       - postgres
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/dd_manager
       SPRING_DATASOURCE_USERNAME: dnd_user
-      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD:-dev-only-change-me}
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD:-dnd_password}
+      APP_JWT_SECRET: ${APP_JWT_SECRET:-dev-super-secret-change-me}
       APP_UPLOAD_DIR: /app/uploads
-      APP_JWT_SECRET: ${APP_JWT_SECRET:-dev-only-change-me-long-random-secret}
     volumes:
       - dnd_uploads:/app/uploads
     ports:
       - "8080:8080"
-    networks:
-      - dnd_internal
     restart: unless-stopped
 
   frontend:
     build:
-      context: ./frontend/D-Dmenager-Front
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        VITE_API_BASE_URL: ${VITE_API_BASE_URL:-http://localhost:8080}
     container_name: dnd-frontend
     depends_on:
       - backend
     ports:
       - "8081:80"
-    networks:
-      - dnd_internal
     restart: unless-stopped
 
 volumes:
   dnd_postgres_data:
   dnd_uploads:
-
-networks:
-  dnd_internal:
-    driver: bridge

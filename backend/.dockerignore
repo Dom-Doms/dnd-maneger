@@ -1,0 +1,12 @@
+target
+.git
+.idea
+.vscode
+uploads
+*.iml
+**/target
+**/.git
+**/.idea
+**/.vscode
+**/uploads
+**/*.iml
