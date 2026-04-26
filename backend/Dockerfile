@@ -3,7 +3,7 @@ WORKDIR /workspace
 
 RUN apk add --no-cache maven
 
-COPY D-Dmenager/ ./
+COPY . ./
 
 RUN if [ -f ./mvnw ]; then chmod +x ./mvnw && ./mvnw -q -DskipTests package; else mvn -q -DskipTests package; fi
 
