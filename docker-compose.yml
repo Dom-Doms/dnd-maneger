@@ -2,46 +2,42 @@ services:
   postgres:
     image: postgres:16-alpine
     container_name: dnd-postgres
+    restart: unless-stopped
     environment:
       POSTGRES_DB: dd_manager
-      POSTGRES_USER: dnd_user
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-dnd_password}
+      POSTGRES_USER: dd_user
+      POSTGRES_PASSWORD: dd_password
     volumes:
       - dnd_postgres_data:/var/lib/postgresql/data
-    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dd_user -d dd_manager"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
 
   backend:
-    build:
-      context: ./backend/D-Dmenager
-      dockerfile: ../Dockerfile
+    build: ./D-Dmenager
     container_name: dnd-backend
+    restart: unless-stopped
     depends_on:
-      - postgres
+      postgres:
+        condition: service_healthy
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/dd_manager
-      SPRING_DATASOURCE_USERNAME: dnd_user
-      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD:-dnd_password}
-      APP_JWT_SECRET: ${APP_JWT_SECRET:-dev-super-secret-change-me}
-      APP_UPLOAD_DIR: /app/uploads
-    volumes:
-      - dnd_uploads:/app/uploads
+      SPRING_PROFILES_ACTIVE: docker
     ports:
       - "8080:8080"
-    restart: unless-stopped
 
   frontend:
     build:
-      context: ./frontend/D-Dmenager-Front
-      dockerfile: ../Dockerfile
+      context: ./D-Dmenager-Front
       args:
-        VITE_API_BASE_URL: ${VITE_API_BASE_URL:-http://localhost:8080}
+        VITE_API_BASE_URL: https://api-dnd.gesu.gay
     container_name: dnd-frontend
+    restart: unless-stopped
     depends_on:
       - backend
     ports:
       - "8081:80"
-    restart: unless-stopped
 
 volumes:
   dnd_postgres_data:
-  dnd_uploads:
