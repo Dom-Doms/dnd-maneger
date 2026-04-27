@@ -1,0 +1,6214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="it.univ.ddmanager.campaign.CampaignPlayerIntegrationTest" time="7.614" tests="5" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\Domenico\IdeaProjects\D-Dmenager\target\test-classes;C:\Users\Domenico\IdeaProjects\D-Dmenager\target\classes;C:\Users\Domenico\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.2.5\spring-boot-starter-web-3.2.5.jar;C:\Users\Domenico\.m2\repository\org\springframework\boot\spring-boot-starter\3.2.5\spring-boot-starter-3.2.5.jar;C:\Users\Domenico\.m2\repository\org\springframework\boot\spring-boot\3.2.5\spring-boot-3.2.5.jar;C:\Users\Domenico\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.2.5\spring-boot-autoconfigure-3.2.5.jar;C:\Users\Domenico\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.2.5\spring-boot-starter-logging-3.2.5.jar;C:\Users\Domenico\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\Domenico\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\Domenico\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.21.1\log4j-to-slf4j-2.21.1.jar;C:\Users\Domenico\.m2\repository\org\apache\logging\log4j\log4j-api\2.21.1\log4j-api-2.21.1.jar;C:\Users\Domenico\.m2\repository\org\slf4j\jul-to-slf4j\2.0.13\jul-to-slf4j-2.0.13.jar;C:\Users\Domenico\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\Domenico\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\Domenico\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.2.5\spring-boot-starter-json-3.2.5.jar;C:\Users\Domenico\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.4\jackson-databind-2.15.4.jar;C:\Users\Domenico\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.4\jackson-annotations-2.15.4.jar;C:\Users\Domenico\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.4\jackson-core-2.15.4.jar;C:\Users\Domenico\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.15.4\jackson-datatype-jdk8-2.15.4.jar;C:\Users\Domenico\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.15.4\jackson-datatype-jsr310-2.15.4.jar;C:\Users\Domenico\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.15.4\jackson-module-parameter-names-2.15.4.jar;C:\Users\Domenico\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.2.5\spring-boot-starter-tomcat-3.2.5.jar;C:\Users\Domenico\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.20\tomcat-embed-core-10.1.20.jar;C:\Users\Domenico\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.20\tomcat-embed-websocket-10.1.20.jar;C:\Users\Domenico\.m2\repository\org\springframework\spring-web\6.1.6\spring-web-6.1.6.jar;C:\Users\Domenico\.m2\repository\org\springframework\spring-beans\6.1.6\spring-beans-6.1.6.jar;C:\Users\Domenico\.m2\repository\io\micrometer\micrometer-observation\1.12.5\micrometer-observation-1.12.5.jar;C:\Users\Domenico\.m2\repository\io\micrometer\micrometer-commons\1.12.5\micrometer-commons-1.12.5.jar;C:\Users\Domenico\.m2\repository\org\springframework\spring-webmvc\6.1.6\spring-webmvc-6.1.6.jar;C:\Users\Domenico\.m2\repository\org\springframework\spring-context\6.1.6\spring-context-6.1.6.jar;C:\Users\Domenico\.m2\repository\org\springframework\spring-expression\6.1.6\spring-expression-6.1.6.jar;C:\Users\Domenico\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.2.5\spring-boot-starter-data-jpa-3.2.5.jar;C:\Users\Domenico\.m2\repository\org\springframework\boot\spring-boot-starter-aop\3.2.5\spring-boot-starter-aop-3.2.5.jar;C:\Users\Domenico\.m2\repository\org\aspectj\aspectjweaver\1.9.22\aspectjweaver-1.9.22.jar;C:\Users\Domenico\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.2.5\spring-boot-starter-jdbc-3.2.5.jar;C:\Users\Domenico\.m2\repository\com\zaxxer\HikariCP\5.0.1\HikariCP-5.0.1.jar;C:\Users\Domenico\.m2\repository\org\springframework\spring-jdbc\6.1.6\spring-jdbc-6.1.6.jar;C:\Users\Domenico\.m2\repository\org\hibernate\orm\hibernate-core\6.4.4.Final\hibernate-core-6.4.4.Final.jar;C:\Users\Domenico\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\Domenico\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\Domenico\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\Domenico\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\Domenico\.m2\repository\io\smallrye\jandex\3.1.2\jandex-3.1.2.jar;C:\Users\Domenico\.m2\repository\com\fasterxml\classmate\1.6.0\classmate-1.6.0.jar;C:\Users\Domenico\.m2\repository\net\bytebuddy\byte-buddy\1.14.13\byte-buddy-1.14.13.jar;C:\Users\Domenico\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.5\jaxb-runtime-4.0.5.jar;C:\Users\Domenico\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.5\jaxb-core-4.0.5.jar;C:\Users\Domenico\.m2\repository\org\eclipse\angus\angus-activation\2.0.2\angus-activation-2.0.2.jar;C:\Users\Domenico\.m2\repository\org\glassfish\jaxb\txw2\4.0.5\txw2-4.0.5.jar;C:\Users\Domenico\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\Domenico\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\Domenico\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\Domenico\.m2\repository\org\springframework\data\spring-data-jpa\3.2.5\spring-data-jpa-3.2.5.jar;C:\Users\Domenico\.m2\repository\org\springframework\data\spring-data-commons\3.2.5\spring-data-commons-3.2.5.jar;C:\Users\Domenico\.m2\repository\org\springframework\spring-orm\6.1.6\spring-orm-6.1.6.jar;C:\Users\Domenico\.m2\repository\org\springframework\spring-tx\6.1.6\spring-tx-6.1.6.jar;C:\Users\Domenico\.m2\repository\org\slf4j\slf4j-api\2.0.13\slf4j-api-2.0.13.jar;C:\Users\Domenico\.m2\repository\org\springframework\spring-aspects\6.1.6\spring-aspects-6.1.6.jar;C:\Users\Domenico\.m2\repository\org\springframework\boot\spring-boot-starter-security\3.2.5\spring-boot-starter-security-3.2.5.jar;C:\Users\Domenico\.m2\repository\org\springframework\spring-aop\6.1.6\spring-aop-6.1.6.jar;C:\Users\Domenico\.m2\repository\org\springframework\security\spring-security-config\6.2.4\spring-security-config-6.2.4.jar;C:\Users\Domenico\.m2\repository\org\springframework\security\spring-security-web\6.2.4\spring-security-web-6.2.4.jar;C:\Users\Domenico\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.2.5\spring-boot-starter-validation-3.2.5.jar;C:\Users\Domenico\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.20\tomcat-embed-el-10.1.20.jar;C:\Users\Domenico\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.1.Final\hibernate-validator-8.0.1.Final.jar;C:\Users\Domenico\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\Domenico\.m2\repository\org\postgresql\postgresql\42.6.2\postgresql-42.6.2.jar;C:\Users\Domenico\.m2\repository\org\checkerframework\checker-qual\3.31.0\checker-qual-3.31.0.jar;C:\Users\Domenico\.m2\repository\org\projectlombok\lombok\1.18.32\lombok-1.18.32.jar;C:\Users\Domenico\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.2.5\spring-boot-starter-test-3.2.5.jar;C:\Users\Domenico\.m2\repository\org\springframework\boot\spring-boot-test\3.2.5\spring-boot-test-3.2.5.jar;C:\Users\Domenico\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.2.5\spring-boot-test-autoconfigure-3.2.5.jar;C:\Users\Domenico\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\Domenico\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.2\jakarta.xml.bind-api-4.0.2.jar;C:\Users\Domenico\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar;C:\Users\Domenico\.m2\repository\net\minidev\json-smart\2.5.1\json-smart-2.5.1.jar;C:\Users\Domenico\.m2\repository\net\minidev\accessors-smart\2.5.1\accessors-smart-2.5.1.jar;C:\Users\Domenico\.m2\repository\org\ow2\asm\asm\9.6\asm-9.6.jar;C:\Users\Domenico\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;C:\Users\Domenico\.m2\repository\org\awaitility\awaitility\4.2.1\awaitility-4.2.1.jar;C:\Users\Domenico\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\Domenico\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\Domenico\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\Domenico\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Domenico\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\Domenico\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Domenico\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\Domenico\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\Domenico\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\Domenico\.m2\repository\org\mockito\mockito-core\5.7.0\mockito-core-5.7.0.jar;C:\Users\Domenico\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.13\byte-buddy-agent-1.14.13.jar;C:\Users\Domenico\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\Domenico\.m2\repository\org\mockito\mockito-junit-jupiter\5.7.0\mockito-junit-jupiter-5.7.0.jar;C:\Users\Domenico\.m2\repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;C:\Users\Domenico\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\Domenico\.m2\repository\org\springframework\spring-core\6.1.6\spring-core-6.1.6.jar;C:\Users\Domenico\.m2\repository\org\springframework\spring-jcl\6.1.6\spring-jcl-6.1.6.jar;C:\Users\Domenico\.m2\repository\org\springframework\spring-test\6.1.6\spring-test-6.1.6.jar;C:\Users\Domenico\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;C:\Users\Domenico\.m2\repository\org\springframework\security\spring-security-test\6.2.4\spring-security-test-6.2.4.jar;C:\Users\Domenico\.m2\repository\org\springframework\security\spring-security-core\6.2.4\spring-security-core-6.2.4.jar;C:\Users\Domenico\.m2\repository\org\springframework\security\spring-security-crypto\6.2.4\spring-security-crypto-6.2.4.jar;"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Europe/Rome"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="IT"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17.0.16+8\bin"/>
+    <property name="sun.java.command" value="C:\Users\Domenico\AppData\Local\Temp\surefire6840442931179950249\surefirebooter-20251213122215691_3.jar C:\Users\Domenico\AppData\Local\Temp\surefire6840442931179950249 2025-12-13T12-22-15_238-jvmRun1 surefire-20251213122215691_1tmp surefire_0-20251213122215691_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\Domenico\IdeaProjects\D-Dmenager\target\test-classes;C:\Users\Domenico\IdeaProjects\D-Dmenager\target\classes;C:\Users\Domenico\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.2.5\spring-boot-starter-web-3.2.5.jar;C:\Users\Domenico\.m2\repository\org\springframework\boot\spring-boot-starter\3.2.5\spring-boot-starter-3.2.5.jar;C:\Users\Domenico\.m2\repository\org\springframework\boot\spring-boot\3.2.5\spring-boot-3.2.5.jar;C:\Users\Domenico\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.2.5\spring-boot-autoconfigure-3.2.5.jar;C:\Users\Domenico\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.2.5\spring-boot-starter-logging-3.2.5.jar;C:\Users\Domenico\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\Domenico\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\Domenico\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.21.1\log4j-to-slf4j-2.21.1.jar;C:\Users\Domenico\.m2\repository\org\apache\logging\log4j\log4j-api\2.21.1\log4j-api-2.21.1.jar;C:\Users\Domenico\.m2\repository\org\slf4j\jul-to-slf4j\2.0.13\jul-to-slf4j-2.0.13.jar;C:\Users\Domenico\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\Domenico\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\Domenico\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.2.5\spring-boot-starter-json-3.2.5.jar;C:\Users\Domenico\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.4\jackson-databind-2.15.4.jar;C:\Users\Domenico\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.4\jackson-annotations-2.15.4.jar;C:\Users\Domenico\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.4\jackson-core-2.15.4.jar;C:\Users\Domenico\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.15.4\jackson-datatype-jdk8-2.15.4.jar;C:\Users\Domenico\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.15.4\jackson-datatype-jsr310-2.15.4.jar;C:\Users\Domenico\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.15.4\jackson-module-parameter-names-2.15.4.jar;C:\Users\Domenico\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.2.5\spring-boot-starter-tomcat-3.2.5.jar;C:\Users\Domenico\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.20\tomcat-embed-core-10.1.20.jar;C:\Users\Domenico\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.20\tomcat-embed-websocket-10.1.20.jar;C:\Users\Domenico\.m2\repository\org\springframework\spring-web\6.1.6\spring-web-6.1.6.jar;C:\Users\Domenico\.m2\repository\org\springframework\spring-beans\6.1.6\spring-beans-6.1.6.jar;C:\Users\Domenico\.m2\repository\io\micrometer\micrometer-observation\1.12.5\micrometer-observation-1.12.5.jar;C:\Users\Domenico\.m2\repository\io\micrometer\micrometer-commons\1.12.5\micrometer-commons-1.12.5.jar;C:\Users\Domenico\.m2\repository\org\springframework\spring-webmvc\6.1.6\spring-webmvc-6.1.6.jar;C:\Users\Domenico\.m2\repository\org\springframework\spring-context\6.1.6\spring-context-6.1.6.jar;C:\Users\Domenico\.m2\repository\org\springframework\spring-expression\6.1.6\spring-expression-6.1.6.jar;C:\Users\Domenico\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.2.5\spring-boot-starter-data-jpa-3.2.5.jar;C:\Users\Domenico\.m2\repository\org\springframework\boot\spring-boot-starter-aop\3.2.5\spring-boot-starter-aop-3.2.5.jar;C:\Users\Domenico\.m2\repository\org\aspectj\aspectjweaver\1.9.22\aspectjweaver-1.9.22.jar;C:\Users\Domenico\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.2.5\spring-boot-starter-jdbc-3.2.5.jar;C:\Users\Domenico\.m2\repository\com\zaxxer\HikariCP\5.0.1\HikariCP-5.0.1.jar;C:\Users\Domenico\.m2\repository\org\springframework\spring-jdbc\6.1.6\spring-jdbc-6.1.6.jar;C:\Users\Domenico\.m2\repository\org\hibernate\orm\hibernate-core\6.4.4.Final\hibernate-core-6.4.4.Final.jar;C:\Users\Domenico\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\Domenico\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\Domenico\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\Domenico\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\Domenico\.m2\repository\io\smallrye\jandex\3.1.2\jandex-3.1.2.jar;C:\Users\Domenico\.m2\repository\com\fasterxml\classmate\1.6.0\classmate-1.6.0.jar;C:\Users\Domenico\.m2\repository\net\bytebuddy\byte-buddy\1.14.13\byte-buddy-1.14.13.jar;C:\Users\Domenico\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.5\jaxb-runtime-4.0.5.jar;C:\Users\Domenico\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.5\jaxb-core-4.0.5.jar;C:\Users\Domenico\.m2\repository\org\eclipse\angus\angus-activation\2.0.2\angus-activation-2.0.2.jar;C:\Users\Domenico\.m2\repository\org\glassfish\jaxb\txw2\4.0.5\txw2-4.0.5.jar;C:\Users\Domenico\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\Domenico\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\Domenico\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\Domenico\.m2\repository\org\springframework\data\spring-data-jpa\3.2.5\spring-data-jpa-3.2.5.jar;C:\Users\Domenico\.m2\repository\org\springframework\data\spring-data-commons\3.2.5\spring-data-commons-3.2.5.jar;C:\Users\Domenico\.m2\repository\org\springframework\spring-orm\6.1.6\spring-orm-6.1.6.jar;C:\Users\Domenico\.m2\repository\org\springframework\spring-tx\6.1.6\spring-tx-6.1.6.jar;C:\Users\Domenico\.m2\repository\org\slf4j\slf4j-api\2.0.13\slf4j-api-2.0.13.jar;C:\Users\Domenico\.m2\repository\org\springframework\spring-aspects\6.1.6\spring-aspects-6.1.6.jar;C:\Users\Domenico\.m2\repository\org\springframework\boot\spring-boot-starter-security\3.2.5\spring-boot-starter-security-3.2.5.jar;C:\Users\Domenico\.m2\repository\org\springframework\spring-aop\6.1.6\spring-aop-6.1.6.jar;C:\Users\Domenico\.m2\repository\org\springframework\security\spring-security-config\6.2.4\spring-security-config-6.2.4.jar;C:\Users\Domenico\.m2\repository\org\springframework\security\spring-security-web\6.2.4\spring-security-web-6.2.4.jar;C:\Users\Domenico\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.2.5\spring-boot-starter-validation-3.2.5.jar;C:\Users\Domenico\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.20\tomcat-embed-el-10.1.20.jar;C:\Users\Domenico\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.1.Final\hibernate-validator-8.0.1.Final.jar;C:\Users\Domenico\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\Domenico\.m2\repository\org\postgresql\postgresql\42.6.2\postgresql-42.6.2.jar;C:\Users\Domenico\.m2\repository\org\checkerframework\checker-qual\3.31.0\checker-qual-3.31.0.jar;C:\Users\Domenico\.m2\repository\org\projectlombok\lombok\1.18.32\lombok-1.18.32.jar;C:\Users\Domenico\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.2.5\spring-boot-starter-test-3.2.5.jar;C:\Users\Domenico\.m2\repository\org\springframework\boot\spring-boot-test\3.2.5\spring-boot-test-3.2.5.jar;C:\Users\Domenico\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.2.5\spring-boot-test-autoconfigure-3.2.5.jar;C:\Users\Domenico\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\Domenico\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.2\jakarta.xml.bind-api-4.0.2.jar;C:\Users\Domenico\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar;C:\Users\Domenico\.m2\repository\net\minidev\json-smart\2.5.1\json-smart-2.5.1.jar;C:\Users\Domenico\.m2\repository\net\minidev\accessors-smart\2.5.1\accessors-smart-2.5.1.jar;C:\Users\Domenico\.m2\repository\org\ow2\asm\asm\9.6\asm-9.6.jar;C:\Users\Domenico\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;C:\Users\Domenico\.m2\repository\org\awaitility\awaitility\4.2.1\awaitility-4.2.1.jar;C:\Users\Domenico\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\Domenico\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\Domenico\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\Domenico\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Domenico\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\Domenico\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Domenico\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\Domenico\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\Domenico\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\Domenico\.m2\repository\org\mockito\mockito-core\5.7.0\mockito-core-5.7.0.jar;C:\Users\Domenico\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.13\byte-buddy-agent-1.14.13.jar;C:\Users\Domenico\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\Domenico\.m2\repository\org\mockito\mockito-junit-jupiter\5.7.0\mockito-junit-jupiter-5.7.0.jar;C:\Users\Domenico\.m2\repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;C:\Users\Domenico\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\Domenico\.m2\repository\org\springframework\spring-core\6.1.6\spring-core-6.1.6.jar;C:\Users\Domenico\.m2\repository\org\springframework\spring-jcl\6.1.6\spring-jcl-6.1.6.jar;C:\Users\Domenico\.m2\repository\org\springframework\spring-test\6.1.6\spring-test-6.1.6.jar;C:\Users\Domenico\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;C:\Users\Domenico\.m2\repository\org\springframework\security\spring-security-test\6.2.4\spring-security-test-6.2.4.jar;C:\Users\Domenico\.m2\repository\org\springframework\security\spring-security-core\6.2.4\spring-security-core-6.2.4.jar;C:\Users\Domenico\.m2\repository\org\springframework\security\spring-security-crypto\6.2.4\spring-security-crypto-6.2.4.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Domenico"/>
+    <property name="user.language" value="it"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-07-15"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-17.0.16+8"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\Domenico\IdeaProjects\D-Dmenager"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="windows-1252"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="C:\Users\Domenico\AppData\Local\Temp\surefire6840442931179950249\surefirebooter-20251213122215691_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.16+8"/>
+    <property name="user.name" value="Domenico"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-17.0.16+8"/>
+    <property name="localRepository" value="C:\Users\Domenico\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="C:\Users\Domenico\AppData\Local\Temp\"/>
+    <property name="com.zaxxer.hikari.pool_number" value="1"/>
+    <property name="java.version" value="17.0.16"/>
+    <property name="user.dir" value="C:\Users\Domenico\IdeaProjects\D-Dmenager"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="26828"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="CONSOLE_LOG_CHARSET" value="windows-1252"/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-17.0.16+8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Users\Domenico\AppData\Local\Temp\.tmpnvi8hW;C:\Users\Domenico\AppData\Roaming\npm\node_modules\@openai\codex\vendor\x86_64-pc-windows-msvc\path;C:\Program Files\Java\jdk-17.0.16+8\bin;C:\dev\apache-maven-3.9.11\bin;C:\Program Files\PostgreSQL\17\bin;C:\Program Files\flutter\bin;C:\Users\Domenico\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\Domenico\AppData\Local\Programs\Python\Python313\;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\;C:\ProgramData\chocolatey\bin;C:\Users\Domenico\AppData\Local\Programs\Eclipse Adoptium\jdk-17.0.16.8-hotspot\bin;C:\Users\Domenico\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\Domenico\AppData\Local\Programs\Python\Python310\;C:\Users\Domenico\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\Domenico\AppData\Local\Programs\Python\Python313\;C:\Users\Domenico\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA 2024.3.3\bin;C:\Users\Domenico\.dotnet\tools;C:\Users\Domenico\source;C:\Users\Domenico\AppData\Local\Programs\Ollama;C:\Users\Domenico\AppData\Local\JetBrains\Toolbox\scripts;C:\Users\Domenico\AppData\Roaming\npm;C:\Users\Domenico\Android\android-sdk\platform-tools;C:\Users\Domenico\Android\android-sdk\emulator;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="17.0.16+8"/>
+    <property name="java.specification.maintenance.version" value="1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="nonOwnerOrAdminCannotManageJoinRequests" classname="it.univ.ddmanager.campaign.CampaignPlayerIntegrationTest" time="1.172">
+    <system-out><![CDATA[2025-12-13T12:22:36.152+01:00  INFO 26828 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [it.univ.ddmanager.campaign.CampaignPlayerIntegrationTest]: CampaignPlayerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-12-13T12:22:36.156+01:00  INFO 26828 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration it.univ.ddmanager.DdManagerApplication for test class it.univ.ddmanager.campaign.CampaignPlayerIntegrationTest
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+Hibernate: 
+    insert 
+    into
+        users
+        (email, nickname, password) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        users_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password,
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users u1_0 
+    left join
+        users_roles r1_0 
+            on u1_0.id=r1_0.user_id 
+    left join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+Hibernate: 
+    insert 
+    into
+        users
+        (email, nickname, password) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        users_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+Hibernate: 
+    insert 
+    into
+        users
+        (email, nickname, password) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        users_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    insert 
+    into
+        worlds
+        (description, is_public, name, owner_id) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        count(c1_0.id) 
+    from
+        campaigns c1_0 
+    left join
+        worlds w1_0 
+            on w1_0.id=c1_0.world_id 
+    where
+        w1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        w1_0.id,
+        w1_0.description,
+        w1_0.is_public,
+        w1_0.name,
+        w1_0.owner_id 
+    from
+        worlds w1_0 
+    where
+        w1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        c1_0.id 
+    from
+        campaigns c1_0 
+    left join
+        worlds w1_0 
+            on w1_0.id=c1_0.world_id 
+    where
+        w1_0.id=? 
+        and upper(c1_0.name)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        campaigns
+        (description, name, owner_id, status, world_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    insert 
+    into
+        player_characters
+        (acrobatics_proficient, alignment, allies_and_organizations, animal_handling_proficient, appearance, arcana_proficient, armor_class, athletics_proficient, attacks_and_spellcasting, background, backstory, bonds, character_class, charisma, charisma_save_proficient, constitution, constitution_save_proficient, current_hit_points, death_save_failures, death_save_successes, deception_proficient, dexterity, dexterity_save_proficient, equipment, experience_points, features_and_traits, flaws, gm_notes, history_proficient, hit_dice, ideals, initiative_modifier, insight_proficient, inspiration, intelligence, intelligence_save_proficient, intimidation_proficient, investigation_proficient, is_visible_to_players, known_spells, level, max_hit_points, medicine_proficient, name, nature_proficient, other_notes, other_proficiencies, owner_id, passive_insight, passive_investigation, passive_perception, perception_proficient, performance_proficient, personality_traits, persuasion_proficient, prepared_spells, proficiencies_and_languages, proficiency_bonus, race, religion_proficient, sleight_of_hand_proficient, speed, spell_attack_bonus, spell_savedc, spell_slots, spellcasting_class, spells, stealth_proficient, strength, strength_save_proficient, subclass, survival_proficient, temporary_hit_points, treasure, wisdom, wisdom_save_proficient, world_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        player_character_languages
+        (character_id, language) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        c1_0.owner_id,
+        c1_0.status,
+        c1_0.world_id 
+    from
+        campaigns c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        pc1_0.id,
+        pc1_0.acrobatics_proficient,
+        pc1_0.alignment,
+        pc1_0.allies_and_organizations,
+        pc1_0.animal_handling_proficient,
+        pc1_0.appearance,
+        pc1_0.arcana_proficient,
+        pc1_0.armor_class,
+        pc1_0.athletics_proficient,
+        pc1_0.attacks_and_spellcasting,
+        pc1_0.background,
+        pc1_0.backstory,
+        pc1_0.bonds,
+        pc1_0.character_class,
+        pc1_0.charisma,
+        pc1_0.charisma_save_proficient,
+        pc1_0.constitution,
+        pc1_0.constitution_save_proficient,
+        pc1_0.current_hit_points,
+        pc1_0.death_save_failures,
+        pc1_0.death_save_successes,
+        pc1_0.deception_proficient,
+        pc1_0.dexterity,
+        pc1_0.dexterity_save_proficient,
+        pc1_0.equipment,
+        pc1_0.experience_points,
+        pc1_0.features_and_traits,
+        pc1_0.flaws,
+        pc1_0.gm_notes,
+        pc1_0.history_proficient,
+        pc1_0.hit_dice,
+        pc1_0.ideals,
+        pc1_0.initiative_modifier,
+        pc1_0.insight_proficient,
+        pc1_0.inspiration,
+        pc1_0.intelligence,
+        pc1_0.intelligence_save_proficient,
+        pc1_0.intimidation_proficient,
+        pc1_0.investigation_proficient,
+        pc1_0.is_visible_to_players,
+        kl1_0.character_id,
+        kl1_0.language,
+        pc1_0.known_spells,
+        pc1_0.level,
+        pc1_0.max_hit_points,
+        pc1_0.medicine_proficient,
+        pc1_0.name,
+        pc1_0.nature_proficient,
+        pc1_0.other_notes,
+        pc1_0.other_proficiencies,
+        pc1_0.owner_id,
+        pc1_0.passive_insight,
+        pc1_0.passive_investigation,
+        pc1_0.passive_perception,
+        pc1_0.perception_proficient,
+        pc1_0.performance_proficient,
+        pc1_0.personality_traits,
+        pc1_0.persuasion_proficient,
+        pc1_0.prepared_spells,
+        pc1_0.proficiencies_and_languages,
+        pc1_0.proficiency_bonus,
+        pc1_0.race,
+        pc1_0.religion_proficient,
+        pc1_0.sleight_of_hand_proficient,
+        pc1_0.speed,
+        pc1_0.spell_attack_bonus,
+        pc1_0.spell_savedc,
+        pc1_0.spell_slots,
+        pc1_0.spellcasting_class,
+        pc1_0.spells,
+        pc1_0.stealth_proficient,
+        pc1_0.strength,
+        pc1_0.strength_save_proficient,
+        pc1_0.subclass,
+        pc1_0.survival_proficient,
+        pc1_0.temporary_hit_points,
+        pc1_0.treasure,
+        pc1_0.wisdom,
+        pc1_0.wisdom_save_proficient,
+        pc1_0.world_id 
+    from
+        player_characters pc1_0 
+    left join
+        player_character_languages kl1_0 
+            on pc1_0.id=kl1_0.character_id 
+    where
+        pc1_0.id=?
+Hibernate: 
+    select
+        cp1_0.id 
+    from
+        campaign_players cp1_0 
+    where
+        cp1_0.campaign_id=? 
+        and cp1_0.character_id=? 
+        and cp1_0.status in (?, ?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        campaign_players
+        (campaign_id, character_id, created_at, decision_by_id, message, player_id, status, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        c1_0.owner_id,
+        c1_0.status,
+        c1_0.world_id 
+    from
+        campaigns c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        cp1_0.id,
+        cp1_0.campaign_id,
+        cp1_0.character_id,
+        cp1_0.created_at,
+        cp1_0.decision_by_id,
+        cp1_0.message,
+        cp1_0.player_id,
+        cp1_0.status,
+        cp1_0.updated_at 
+    from
+        campaign_players cp1_0 
+    where
+        cp1_0.campaign_id=? 
+        and cp1_0.player_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+]]></system-out>
+  </testcase>
+  <testcase name="worldMismatchAndVisibilityRules" classname="it.univ.ddmanager.campaign.CampaignPlayerIntegrationTest" time="1.776">
+    <system-out><![CDATA[Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+Hibernate: 
+    insert 
+    into
+        users
+        (email, nickname, password) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        users_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password,
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users u1_0 
+    left join
+        users_roles r1_0 
+            on u1_0.id=r1_0.user_id 
+    left join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+Hibernate: 
+    insert 
+    into
+        users
+        (email, nickname, password) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        users_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+Hibernate: 
+    insert 
+    into
+        users
+        (email, nickname, password) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        users_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    insert 
+    into
+        worlds
+        (description, is_public, name, owner_id) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        count(c1_0.id) 
+    from
+        campaigns c1_0 
+    left join
+        worlds w1_0 
+            on w1_0.id=c1_0.world_id 
+    where
+        w1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    insert 
+    into
+        worlds
+        (description, is_public, name, owner_id) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        count(c1_0.id) 
+    from
+        campaigns c1_0 
+    left join
+        worlds w1_0 
+            on w1_0.id=c1_0.world_id 
+    where
+        w1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        w1_0.id,
+        w1_0.description,
+        w1_0.is_public,
+        w1_0.name,
+        w1_0.owner_id 
+    from
+        worlds w1_0 
+    where
+        w1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        c1_0.id 
+    from
+        campaigns c1_0 
+    left join
+        worlds w1_0 
+            on w1_0.id=c1_0.world_id 
+    where
+        w1_0.id=? 
+        and upper(c1_0.name)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        campaigns
+        (description, name, owner_id, status, world_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    insert 
+    into
+        player_characters
+        (acrobatics_proficient, alignment, allies_and_organizations, animal_handling_proficient, appearance, arcana_proficient, armor_class, athletics_proficient, attacks_and_spellcasting, background, backstory, bonds, character_class, charisma, charisma_save_proficient, constitution, constitution_save_proficient, current_hit_points, death_save_failures, death_save_successes, deception_proficient, dexterity, dexterity_save_proficient, equipment, experience_points, features_and_traits, flaws, gm_notes, history_proficient, hit_dice, ideals, initiative_modifier, insight_proficient, inspiration, intelligence, intelligence_save_proficient, intimidation_proficient, investigation_proficient, is_visible_to_players, known_spells, level, max_hit_points, medicine_proficient, name, nature_proficient, other_notes, other_proficiencies, owner_id, passive_insight, passive_investigation, passive_perception, perception_proficient, performance_proficient, personality_traits, persuasion_proficient, prepared_spells, proficiencies_and_languages, proficiency_bonus, race, religion_proficient, sleight_of_hand_proficient, speed, spell_attack_bonus, spell_savedc, spell_slots, spellcasting_class, spells, stealth_proficient, strength, strength_save_proficient, subclass, survival_proficient, temporary_hit_points, treasure, wisdom, wisdom_save_proficient, world_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        player_character_languages
+        (character_id, language) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        c1_0.owner_id,
+        c1_0.status,
+        c1_0.world_id 
+    from
+        campaigns c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        pc1_0.id,
+        pc1_0.acrobatics_proficient,
+        pc1_0.alignment,
+        pc1_0.allies_and_organizations,
+        pc1_0.animal_handling_proficient,
+        pc1_0.appearance,
+        pc1_0.arcana_proficient,
+        pc1_0.armor_class,
+        pc1_0.athletics_proficient,
+        pc1_0.attacks_and_spellcasting,
+        pc1_0.background,
+        pc1_0.backstory,
+        pc1_0.bonds,
+        pc1_0.character_class,
+        pc1_0.charisma,
+        pc1_0.charisma_save_proficient,
+        pc1_0.constitution,
+        pc1_0.constitution_save_proficient,
+        pc1_0.current_hit_points,
+        pc1_0.death_save_failures,
+        pc1_0.death_save_successes,
+        pc1_0.deception_proficient,
+        pc1_0.dexterity,
+        pc1_0.dexterity_save_proficient,
+        pc1_0.equipment,
+        pc1_0.experience_points,
+        pc1_0.features_and_traits,
+        pc1_0.flaws,
+        pc1_0.gm_notes,
+        pc1_0.history_proficient,
+        pc1_0.hit_dice,
+        pc1_0.ideals,
+        pc1_0.initiative_modifier,
+        pc1_0.insight_proficient,
+        pc1_0.inspiration,
+        pc1_0.intelligence,
+        pc1_0.intelligence_save_proficient,
+        pc1_0.intimidation_proficient,
+        pc1_0.investigation_proficient,
+        pc1_0.is_visible_to_players,
+        kl1_0.character_id,
+        kl1_0.language,
+        pc1_0.known_spells,
+        pc1_0.level,
+        pc1_0.max_hit_points,
+        pc1_0.medicine_proficient,
+        pc1_0.name,
+        pc1_0.nature_proficient,
+        pc1_0.other_notes,
+        pc1_0.other_proficiencies,
+        pc1_0.owner_id,
+        pc1_0.passive_insight,
+        pc1_0.passive_investigation,
+        pc1_0.passive_perception,
+        pc1_0.perception_proficient,
+        pc1_0.performance_proficient,
+        pc1_0.personality_traits,
+        pc1_0.persuasion_proficient,
+        pc1_0.prepared_spells,
+        pc1_0.proficiencies_and_languages,
+        pc1_0.proficiency_bonus,
+        pc1_0.race,
+        pc1_0.religion_proficient,
+        pc1_0.sleight_of_hand_proficient,
+        pc1_0.speed,
+        pc1_0.spell_attack_bonus,
+        pc1_0.spell_savedc,
+        pc1_0.spell_slots,
+        pc1_0.spellcasting_class,
+        pc1_0.spells,
+        pc1_0.stealth_proficient,
+        pc1_0.strength,
+        pc1_0.strength_save_proficient,
+        pc1_0.subclass,
+        pc1_0.survival_proficient,
+        pc1_0.temporary_hit_points,
+        pc1_0.treasure,
+        pc1_0.wisdom,
+        pc1_0.wisdom_save_proficient,
+        pc1_0.world_id 
+    from
+        player_characters pc1_0 
+    left join
+        player_character_languages kl1_0 
+            on pc1_0.id=kl1_0.character_id 
+    where
+        pc1_0.id=?
+Hibernate: 
+    select
+        cp1_0.id 
+    from
+        campaign_players cp1_0 
+    where
+        cp1_0.campaign_id=? 
+        and cp1_0.character_id=? 
+        and cp1_0.status in (?, ?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        campaign_players
+        (campaign_id, character_id, created_at, decision_by_id, message, player_id, status, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    insert 
+    into
+        player_characters
+        (acrobatics_proficient, alignment, allies_and_organizations, animal_handling_proficient, appearance, arcana_proficient, armor_class, athletics_proficient, attacks_and_spellcasting, background, backstory, bonds, character_class, charisma, charisma_save_proficient, constitution, constitution_save_proficient, current_hit_points, death_save_failures, death_save_successes, deception_proficient, dexterity, dexterity_save_proficient, equipment, experience_points, features_and_traits, flaws, gm_notes, history_proficient, hit_dice, ideals, initiative_modifier, insight_proficient, inspiration, intelligence, intelligence_save_proficient, intimidation_proficient, investigation_proficient, is_visible_to_players, known_spells, level, max_hit_points, medicine_proficient, name, nature_proficient, other_notes, other_proficiencies, owner_id, passive_insight, passive_investigation, passive_perception, perception_proficient, performance_proficient, personality_traits, persuasion_proficient, prepared_spells, proficiencies_and_languages, proficiency_bonus, race, religion_proficient, sleight_of_hand_proficient, speed, spell_attack_bonus, spell_savedc, spell_slots, spellcasting_class, spells, stealth_proficient, strength, strength_save_proficient, subclass, survival_proficient, temporary_hit_points, treasure, wisdom, wisdom_save_proficient, world_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        player_character_languages
+        (character_id, language) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        c1_0.owner_id,
+        c1_0.status,
+        c1_0.world_id 
+    from
+        campaigns c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        pc1_0.id,
+        pc1_0.acrobatics_proficient,
+        pc1_0.alignment,
+        pc1_0.allies_and_organizations,
+        pc1_0.animal_handling_proficient,
+        pc1_0.appearance,
+        pc1_0.arcana_proficient,
+        pc1_0.armor_class,
+        pc1_0.athletics_proficient,
+        pc1_0.attacks_and_spellcasting,
+        pc1_0.background,
+        pc1_0.backstory,
+        pc1_0.bonds,
+        pc1_0.character_class,
+        pc1_0.charisma,
+        pc1_0.charisma_save_proficient,
+        pc1_0.constitution,
+        pc1_0.constitution_save_proficient,
+        pc1_0.current_hit_points,
+        pc1_0.death_save_failures,
+        pc1_0.death_save_successes,
+        pc1_0.deception_proficient,
+        pc1_0.dexterity,
+        pc1_0.dexterity_save_proficient,
+        pc1_0.equipment,
+        pc1_0.experience_points,
+        pc1_0.features_and_traits,
+        pc1_0.flaws,
+        pc1_0.gm_notes,
+        pc1_0.history_proficient,
+        pc1_0.hit_dice,
+        pc1_0.ideals,
+        pc1_0.initiative_modifier,
+        pc1_0.insight_proficient,
+        pc1_0.inspiration,
+        pc1_0.intelligence,
+        pc1_0.intelligence_save_proficient,
+        pc1_0.intimidation_proficient,
+        pc1_0.investigation_proficient,
+        pc1_0.is_visible_to_players,
+        kl1_0.character_id,
+        kl1_0.language,
+        pc1_0.known_spells,
+        pc1_0.level,
+        pc1_0.max_hit_points,
+        pc1_0.medicine_proficient,
+        pc1_0.name,
+        pc1_0.nature_proficient,
+        pc1_0.other_notes,
+        pc1_0.other_proficiencies,
+        pc1_0.owner_id,
+        pc1_0.passive_insight,
+        pc1_0.passive_investigation,
+        pc1_0.passive_perception,
+        pc1_0.perception_proficient,
+        pc1_0.performance_proficient,
+        pc1_0.personality_traits,
+        pc1_0.persuasion_proficient,
+        pc1_0.prepared_spells,
+        pc1_0.proficiencies_and_languages,
+        pc1_0.proficiency_bonus,
+        pc1_0.race,
+        pc1_0.religion_proficient,
+        pc1_0.sleight_of_hand_proficient,
+        pc1_0.speed,
+        pc1_0.spell_attack_bonus,
+        pc1_0.spell_savedc,
+        pc1_0.spell_slots,
+        pc1_0.spellcasting_class,
+        pc1_0.spells,
+        pc1_0.stealth_proficient,
+        pc1_0.strength,
+        pc1_0.strength_save_proficient,
+        pc1_0.subclass,
+        pc1_0.survival_proficient,
+        pc1_0.temporary_hit_points,
+        pc1_0.treasure,
+        pc1_0.wisdom,
+        pc1_0.wisdom_save_proficient,
+        pc1_0.world_id 
+    from
+        player_characters pc1_0 
+    left join
+        player_character_languages kl1_0 
+            on pc1_0.id=kl1_0.character_id 
+    where
+        pc1_0.id=?
+Hibernate: 
+    select
+        cp1_0.id 
+    from
+        campaign_players cp1_0 
+    where
+        cp1_0.campaign_id=? 
+        and cp1_0.character_id=? 
+        and cp1_0.status in (?, ?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        campaign_players
+        (campaign_id, character_id, created_at, decision_by_id, message, player_id, status, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        c1_0.owner_id,
+        c1_0.status,
+        c1_0.world_id 
+    from
+        campaigns c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        cp1_0.id,
+        cp1_0.campaign_id,
+        cp1_0.character_id,
+        cp1_0.created_at,
+        cp1_0.decision_by_id,
+        cp1_0.message,
+        cp1_0.player_id,
+        cp1_0.status,
+        cp1_0.updated_at 
+    from
+        campaign_players cp1_0 
+    where
+        cp1_0.id=? 
+        and cp1_0.campaign_id=?
+Hibernate: 
+    update
+        campaign_players 
+    set
+        campaign_id=?,
+        character_id=?,
+        decision_by_id=?,
+        message=?,
+        player_id=?,
+        status=?,
+        updated_at=? 
+    where
+        id=?
+Hibernate: 
+    select
+        pc1_0.id,
+        pc1_0.acrobatics_proficient,
+        pc1_0.alignment,
+        pc1_0.allies_and_organizations,
+        pc1_0.animal_handling_proficient,
+        pc1_0.appearance,
+        pc1_0.arcana_proficient,
+        pc1_0.armor_class,
+        pc1_0.athletics_proficient,
+        pc1_0.attacks_and_spellcasting,
+        pc1_0.background,
+        pc1_0.backstory,
+        pc1_0.bonds,
+        pc1_0.character_class,
+        pc1_0.charisma,
+        pc1_0.charisma_save_proficient,
+        pc1_0.constitution,
+        pc1_0.constitution_save_proficient,
+        pc1_0.current_hit_points,
+        pc1_0.death_save_failures,
+        pc1_0.death_save_successes,
+        pc1_0.deception_proficient,
+        pc1_0.dexterity,
+        pc1_0.dexterity_save_proficient,
+        pc1_0.equipment,
+        pc1_0.experience_points,
+        pc1_0.features_and_traits,
+        pc1_0.flaws,
+        pc1_0.gm_notes,
+        pc1_0.history_proficient,
+        pc1_0.hit_dice,
+        pc1_0.ideals,
+        pc1_0.initiative_modifier,
+        pc1_0.insight_proficient,
+        pc1_0.inspiration,
+        pc1_0.intelligence,
+        pc1_0.intelligence_save_proficient,
+        pc1_0.intimidation_proficient,
+        pc1_0.investigation_proficient,
+        pc1_0.is_visible_to_players,
+        kl1_0.character_id,
+        kl1_0.language,
+        pc1_0.known_spells,
+        pc1_0.level,
+        pc1_0.max_hit_points,
+        pc1_0.medicine_proficient,
+        pc1_0.name,
+        pc1_0.nature_proficient,
+        pc1_0.other_notes,
+        pc1_0.other_proficiencies,
+        pc1_0.owner_id,
+        pc1_0.passive_insight,
+        pc1_0.passive_investigation,
+        pc1_0.passive_perception,
+        pc1_0.perception_proficient,
+        pc1_0.performance_proficient,
+        pc1_0.personality_traits,
+        pc1_0.persuasion_proficient,
+        pc1_0.prepared_spells,
+        pc1_0.proficiencies_and_languages,
+        pc1_0.proficiency_bonus,
+        pc1_0.race,
+        pc1_0.religion_proficient,
+        pc1_0.sleight_of_hand_proficient,
+        pc1_0.speed,
+        pc1_0.spell_attack_bonus,
+        pc1_0.spell_savedc,
+        pc1_0.spell_slots,
+        pc1_0.spellcasting_class,
+        pc1_0.spells,
+        pc1_0.stealth_proficient,
+        pc1_0.strength,
+        pc1_0.strength_save_proficient,
+        pc1_0.subclass,
+        pc1_0.survival_proficient,
+        pc1_0.temporary_hit_points,
+        pc1_0.treasure,
+        pc1_0.wisdom,
+        pc1_0.wisdom_save_proficient,
+        pc1_0.world_id 
+    from
+        player_characters pc1_0 
+    left join
+        player_character_languages kl1_0 
+            on pc1_0.id=kl1_0.character_id 
+    where
+        pc1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password,
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users u1_0 
+    left join
+        users_roles r1_0 
+            on u1_0.id=r1_0.user_id 
+    left join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        c1_0.owner_id,
+        c1_0.status,
+        c1_0.world_id 
+    from
+        campaigns c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        cp1_0.id,
+        cp1_0.campaign_id,
+        cp1_0.character_id,
+        cp1_0.created_at,
+        cp1_0.decision_by_id,
+        cp1_0.message,
+        cp1_0.player_id,
+        cp1_0.status,
+        cp1_0.updated_at 
+    from
+        campaign_players cp1_0 
+    where
+        cp1_0.campaign_id=? 
+        and cp1_0.status=?
+Hibernate: 
+    select
+        pc1_0.id,
+        pc1_0.acrobatics_proficient,
+        pc1_0.alignment,
+        pc1_0.allies_and_organizations,
+        pc1_0.animal_handling_proficient,
+        pc1_0.appearance,
+        pc1_0.arcana_proficient,
+        pc1_0.armor_class,
+        pc1_0.athletics_proficient,
+        pc1_0.attacks_and_spellcasting,
+        pc1_0.background,
+        pc1_0.backstory,
+        pc1_0.bonds,
+        pc1_0.character_class,
+        pc1_0.charisma,
+        pc1_0.charisma_save_proficient,
+        pc1_0.constitution,
+        pc1_0.constitution_save_proficient,
+        pc1_0.current_hit_points,
+        pc1_0.death_save_failures,
+        pc1_0.death_save_successes,
+        pc1_0.deception_proficient,
+        pc1_0.dexterity,
+        pc1_0.dexterity_save_proficient,
+        pc1_0.equipment,
+        pc1_0.experience_points,
+        pc1_0.features_and_traits,
+        pc1_0.flaws,
+        pc1_0.gm_notes,
+        pc1_0.history_proficient,
+        pc1_0.hit_dice,
+        pc1_0.ideals,
+        pc1_0.initiative_modifier,
+        pc1_0.insight_proficient,
+        pc1_0.inspiration,
+        pc1_0.intelligence,
+        pc1_0.intelligence_save_proficient,
+        pc1_0.intimidation_proficient,
+        pc1_0.investigation_proficient,
+        pc1_0.is_visible_to_players,
+        kl1_0.character_id,
+        kl1_0.language,
+        pc1_0.known_spells,
+        pc1_0.level,
+        pc1_0.max_hit_points,
+        pc1_0.medicine_proficient,
+        pc1_0.name,
+        pc1_0.nature_proficient,
+        pc1_0.other_notes,
+        pc1_0.other_proficiencies,
+        pc1_0.owner_id,
+        pc1_0.passive_insight,
+        pc1_0.passive_investigation,
+        pc1_0.passive_perception,
+        pc1_0.perception_proficient,
+        pc1_0.performance_proficient,
+        pc1_0.personality_traits,
+        pc1_0.persuasion_proficient,
+        pc1_0.prepared_spells,
+        pc1_0.proficiencies_and_languages,
+        pc1_0.proficiency_bonus,
+        pc1_0.race,
+        pc1_0.religion_proficient,
+        pc1_0.sleight_of_hand_proficient,
+        pc1_0.speed,
+        pc1_0.spell_attack_bonus,
+        pc1_0.spell_savedc,
+        pc1_0.spell_slots,
+        pc1_0.spellcasting_class,
+        pc1_0.spells,
+        pc1_0.stealth_proficient,
+        pc1_0.strength,
+        pc1_0.strength_save_proficient,
+        pc1_0.subclass,
+        pc1_0.survival_proficient,
+        pc1_0.temporary_hit_points,
+        pc1_0.treasure,
+        pc1_0.wisdom,
+        pc1_0.wisdom_save_proficient,
+        pc1_0.world_id 
+    from
+        player_characters pc1_0 
+    left join
+        player_character_languages kl1_0 
+            on pc1_0.id=kl1_0.character_id 
+    where
+        pc1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        c1_0.owner_id,
+        c1_0.status,
+        c1_0.world_id 
+    from
+        campaigns c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        cp1_0.id,
+        cp1_0.campaign_id,
+        cp1_0.character_id,
+        cp1_0.created_at,
+        cp1_0.decision_by_id,
+        cp1_0.message,
+        cp1_0.player_id,
+        cp1_0.status,
+        cp1_0.updated_at 
+    from
+        campaign_players cp1_0 
+    where
+        cp1_0.campaign_id=? 
+        and cp1_0.status=?
+Hibernate: 
+    select
+        pc1_0.id,
+        pc1_0.acrobatics_proficient,
+        pc1_0.alignment,
+        pc1_0.allies_and_organizations,
+        pc1_0.animal_handling_proficient,
+        pc1_0.appearance,
+        pc1_0.arcana_proficient,
+        pc1_0.armor_class,
+        pc1_0.athletics_proficient,
+        pc1_0.attacks_and_spellcasting,
+        pc1_0.background,
+        pc1_0.backstory,
+        pc1_0.bonds,
+        pc1_0.character_class,
+        pc1_0.charisma,
+        pc1_0.charisma_save_proficient,
+        pc1_0.constitution,
+        pc1_0.constitution_save_proficient,
+        pc1_0.current_hit_points,
+        pc1_0.death_save_failures,
+        pc1_0.death_save_successes,
+        pc1_0.deception_proficient,
+        pc1_0.dexterity,
+        pc1_0.dexterity_save_proficient,
+        pc1_0.equipment,
+        pc1_0.experience_points,
+        pc1_0.features_and_traits,
+        pc1_0.flaws,
+        pc1_0.gm_notes,
+        pc1_0.history_proficient,
+        pc1_0.hit_dice,
+        pc1_0.ideals,
+        pc1_0.initiative_modifier,
+        pc1_0.insight_proficient,
+        pc1_0.inspiration,
+        pc1_0.intelligence,
+        pc1_0.intelligence_save_proficient,
+        pc1_0.intimidation_proficient,
+        pc1_0.investigation_proficient,
+        pc1_0.is_visible_to_players,
+        kl1_0.character_id,
+        kl1_0.language,
+        pc1_0.known_spells,
+        pc1_0.level,
+        pc1_0.max_hit_points,
+        pc1_0.medicine_proficient,
+        pc1_0.name,
+        pc1_0.nature_proficient,
+        pc1_0.other_notes,
+        pc1_0.other_proficiencies,
+        pc1_0.owner_id,
+        pc1_0.passive_insight,
+        pc1_0.passive_investigation,
+        pc1_0.passive_perception,
+        pc1_0.perception_proficient,
+        pc1_0.performance_proficient,
+        pc1_0.personality_traits,
+        pc1_0.persuasion_proficient,
+        pc1_0.prepared_spells,
+        pc1_0.proficiencies_and_languages,
+        pc1_0.proficiency_bonus,
+        pc1_0.race,
+        pc1_0.religion_proficient,
+        pc1_0.sleight_of_hand_proficient,
+        pc1_0.speed,
+        pc1_0.spell_attack_bonus,
+        pc1_0.spell_savedc,
+        pc1_0.spell_slots,
+        pc1_0.spellcasting_class,
+        pc1_0.spells,
+        pc1_0.stealth_proficient,
+        pc1_0.strength,
+        pc1_0.strength_save_proficient,
+        pc1_0.subclass,
+        pc1_0.survival_proficient,
+        pc1_0.temporary_hit_points,
+        pc1_0.treasure,
+        pc1_0.wisdom,
+        pc1_0.wisdom_save_proficient,
+        pc1_0.world_id 
+    from
+        player_characters pc1_0 
+    left join
+        player_character_languages kl1_0 
+            on pc1_0.id=kl1_0.character_id 
+    where
+        pc1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password,
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users u1_0 
+    left join
+        users_roles r1_0 
+            on u1_0.id=r1_0.user_id 
+    left join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        u1_0.id=?
+]]></system-out>
+  </testcase>
+  <testcase name="player_requestFlowAndGmApproval" classname="it.univ.ddmanager.campaign.CampaignPlayerIntegrationTest" time="1.911">
+    <system-out><![CDATA[Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+Hibernate: 
+    insert 
+    into
+        users
+        (email, nickname, password) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        users_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password,
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users u1_0 
+    left join
+        users_roles r1_0 
+            on u1_0.id=r1_0.user_id 
+    left join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+Hibernate: 
+    insert 
+    into
+        users
+        (email, nickname, password) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        users_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    insert 
+    into
+        worlds
+        (description, is_public, name, owner_id) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        count(c1_0.id) 
+    from
+        campaigns c1_0 
+    left join
+        worlds w1_0 
+            on w1_0.id=c1_0.world_id 
+    where
+        w1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        w1_0.id,
+        w1_0.description,
+        w1_0.is_public,
+        w1_0.name,
+        w1_0.owner_id 
+    from
+        worlds w1_0 
+    where
+        w1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        c1_0.id 
+    from
+        campaigns c1_0 
+    left join
+        worlds w1_0 
+            on w1_0.id=c1_0.world_id 
+    where
+        w1_0.id=? 
+        and upper(c1_0.name)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        campaigns
+        (description, name, owner_id, status, world_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    insert 
+    into
+        player_characters
+        (acrobatics_proficient, alignment, allies_and_organizations, animal_handling_proficient, appearance, arcana_proficient, armor_class, athletics_proficient, attacks_and_spellcasting, background, backstory, bonds, character_class, charisma, charisma_save_proficient, constitution, constitution_save_proficient, current_hit_points, death_save_failures, death_save_successes, deception_proficient, dexterity, dexterity_save_proficient, equipment, experience_points, features_and_traits, flaws, gm_notes, history_proficient, hit_dice, ideals, initiative_modifier, insight_proficient, inspiration, intelligence, intelligence_save_proficient, intimidation_proficient, investigation_proficient, is_visible_to_players, known_spells, level, max_hit_points, medicine_proficient, name, nature_proficient, other_notes, other_proficiencies, owner_id, passive_insight, passive_investigation, passive_perception, perception_proficient, performance_proficient, personality_traits, persuasion_proficient, prepared_spells, proficiencies_and_languages, proficiency_bonus, race, religion_proficient, sleight_of_hand_proficient, speed, spell_attack_bonus, spell_savedc, spell_slots, spellcasting_class, spells, stealth_proficient, strength, strength_save_proficient, subclass, survival_proficient, temporary_hit_points, treasure, wisdom, wisdom_save_proficient, world_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        player_character_languages
+        (character_id, language) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        c1_0.owner_id,
+        c1_0.status,
+        c1_0.world_id 
+    from
+        campaigns c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        pc1_0.id,
+        pc1_0.acrobatics_proficient,
+        pc1_0.alignment,
+        pc1_0.allies_and_organizations,
+        pc1_0.animal_handling_proficient,
+        pc1_0.appearance,
+        pc1_0.arcana_proficient,
+        pc1_0.armor_class,
+        pc1_0.athletics_proficient,
+        pc1_0.attacks_and_spellcasting,
+        pc1_0.background,
+        pc1_0.backstory,
+        pc1_0.bonds,
+        pc1_0.character_class,
+        pc1_0.charisma,
+        pc1_0.charisma_save_proficient,
+        pc1_0.constitution,
+        pc1_0.constitution_save_proficient,
+        pc1_0.current_hit_points,
+        pc1_0.death_save_failures,
+        pc1_0.death_save_successes,
+        pc1_0.deception_proficient,
+        pc1_0.dexterity,
+        pc1_0.dexterity_save_proficient,
+        pc1_0.equipment,
+        pc1_0.experience_points,
+        pc1_0.features_and_traits,
+        pc1_0.flaws,
+        pc1_0.gm_notes,
+        pc1_0.history_proficient,
+        pc1_0.hit_dice,
+        pc1_0.ideals,
+        pc1_0.initiative_modifier,
+        pc1_0.insight_proficient,
+        pc1_0.inspiration,
+        pc1_0.intelligence,
+        pc1_0.intelligence_save_proficient,
+        pc1_0.intimidation_proficient,
+        pc1_0.investigation_proficient,
+        pc1_0.is_visible_to_players,
+        kl1_0.character_id,
+        kl1_0.language,
+        pc1_0.known_spells,
+        pc1_0.level,
+        pc1_0.max_hit_points,
+        pc1_0.medicine_proficient,
+        pc1_0.name,
+        pc1_0.nature_proficient,
+        pc1_0.other_notes,
+        pc1_0.other_proficiencies,
+        pc1_0.owner_id,
+        pc1_0.passive_insight,
+        pc1_0.passive_investigation,
+        pc1_0.passive_perception,
+        pc1_0.perception_proficient,
+        pc1_0.performance_proficient,
+        pc1_0.personality_traits,
+        pc1_0.persuasion_proficient,
+        pc1_0.prepared_spells,
+        pc1_0.proficiencies_and_languages,
+        pc1_0.proficiency_bonus,
+        pc1_0.race,
+        pc1_0.religion_proficient,
+        pc1_0.sleight_of_hand_proficient,
+        pc1_0.speed,
+        pc1_0.spell_attack_bonus,
+        pc1_0.spell_savedc,
+        pc1_0.spell_slots,
+        pc1_0.spellcasting_class,
+        pc1_0.spells,
+        pc1_0.stealth_proficient,
+        pc1_0.strength,
+        pc1_0.strength_save_proficient,
+        pc1_0.subclass,
+        pc1_0.survival_proficient,
+        pc1_0.temporary_hit_points,
+        pc1_0.treasure,
+        pc1_0.wisdom,
+        pc1_0.wisdom_save_proficient,
+        pc1_0.world_id 
+    from
+        player_characters pc1_0 
+    left join
+        player_character_languages kl1_0 
+            on pc1_0.id=kl1_0.character_id 
+    where
+        pc1_0.id=?
+Hibernate: 
+    select
+        cp1_0.id 
+    from
+        campaign_players cp1_0 
+    where
+        cp1_0.campaign_id=? 
+        and cp1_0.character_id=? 
+        and cp1_0.status in (?, ?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        campaign_players
+        (campaign_id, character_id, created_at, decision_by_id, message, player_id, status, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        c1_0.owner_id,
+        c1_0.status,
+        c1_0.world_id 
+    from
+        campaigns c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        cp1_0.id,
+        cp1_0.campaign_id,
+        cp1_0.character_id,
+        cp1_0.created_at,
+        cp1_0.decision_by_id,
+        cp1_0.message,
+        cp1_0.player_id,
+        cp1_0.status,
+        cp1_0.updated_at 
+    from
+        campaign_players cp1_0 
+    where
+        cp1_0.campaign_id=? 
+        and cp1_0.player_id=?
+Hibernate: 
+    select
+        pc1_0.id,
+        pc1_0.acrobatics_proficient,
+        pc1_0.alignment,
+        pc1_0.allies_and_organizations,
+        pc1_0.animal_handling_proficient,
+        pc1_0.appearance,
+        pc1_0.arcana_proficient,
+        pc1_0.armor_class,
+        pc1_0.athletics_proficient,
+        pc1_0.attacks_and_spellcasting,
+        pc1_0.background,
+        pc1_0.backstory,
+        pc1_0.bonds,
+        pc1_0.character_class,
+        pc1_0.charisma,
+        pc1_0.charisma_save_proficient,
+        pc1_0.constitution,
+        pc1_0.constitution_save_proficient,
+        pc1_0.current_hit_points,
+        pc1_0.death_save_failures,
+        pc1_0.death_save_successes,
+        pc1_0.deception_proficient,
+        pc1_0.dexterity,
+        pc1_0.dexterity_save_proficient,
+        pc1_0.equipment,
+        pc1_0.experience_points,
+        pc1_0.features_and_traits,
+        pc1_0.flaws,
+        pc1_0.gm_notes,
+        pc1_0.history_proficient,
+        pc1_0.hit_dice,
+        pc1_0.ideals,
+        pc1_0.initiative_modifier,
+        pc1_0.insight_proficient,
+        pc1_0.inspiration,
+        pc1_0.intelligence,
+        pc1_0.intelligence_save_proficient,
+        pc1_0.intimidation_proficient,
+        pc1_0.investigation_proficient,
+        pc1_0.is_visible_to_players,
+        kl1_0.character_id,
+        kl1_0.language,
+        pc1_0.known_spells,
+        pc1_0.level,
+        pc1_0.max_hit_points,
+        pc1_0.medicine_proficient,
+        pc1_0.name,
+        pc1_0.nature_proficient,
+        pc1_0.other_notes,
+        pc1_0.other_proficiencies,
+        pc1_0.owner_id,
+        pc1_0.passive_insight,
+        pc1_0.passive_investigation,
+        pc1_0.passive_perception,
+        pc1_0.perception_proficient,
+        pc1_0.performance_proficient,
+        pc1_0.personality_traits,
+        pc1_0.persuasion_proficient,
+        pc1_0.prepared_spells,
+        pc1_0.proficiencies_and_languages,
+        pc1_0.proficiency_bonus,
+        pc1_0.race,
+        pc1_0.religion_proficient,
+        pc1_0.sleight_of_hand_proficient,
+        pc1_0.speed,
+        pc1_0.spell_attack_bonus,
+        pc1_0.spell_savedc,
+        pc1_0.spell_slots,
+        pc1_0.spellcasting_class,
+        pc1_0.spells,
+        pc1_0.stealth_proficient,
+        pc1_0.strength,
+        pc1_0.strength_save_proficient,
+        pc1_0.subclass,
+        pc1_0.survival_proficient,
+        pc1_0.temporary_hit_points,
+        pc1_0.treasure,
+        pc1_0.wisdom,
+        pc1_0.wisdom_save_proficient,
+        pc1_0.world_id 
+    from
+        player_characters pc1_0 
+    left join
+        player_character_languages kl1_0 
+            on pc1_0.id=kl1_0.character_id 
+    where
+        pc1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        c1_0.owner_id,
+        c1_0.status,
+        c1_0.world_id 
+    from
+        campaigns c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        cp1_0.id,
+        cp1_0.campaign_id,
+        cp1_0.character_id,
+        cp1_0.created_at,
+        cp1_0.decision_by_id,
+        cp1_0.message,
+        cp1_0.player_id,
+        cp1_0.status,
+        cp1_0.updated_at 
+    from
+        campaign_players cp1_0 
+    where
+        cp1_0.campaign_id=? 
+        and cp1_0.player_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        c1_0.owner_id,
+        c1_0.status,
+        c1_0.world_id 
+    from
+        campaigns c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        pc1_0.id,
+        pc1_0.acrobatics_proficient,
+        pc1_0.alignment,
+        pc1_0.allies_and_organizations,
+        pc1_0.animal_handling_proficient,
+        pc1_0.appearance,
+        pc1_0.arcana_proficient,
+        pc1_0.armor_class,
+        pc1_0.athletics_proficient,
+        pc1_0.attacks_and_spellcasting,
+        pc1_0.background,
+        pc1_0.backstory,
+        pc1_0.bonds,
+        pc1_0.character_class,
+        pc1_0.charisma,
+        pc1_0.charisma_save_proficient,
+        pc1_0.constitution,
+        pc1_0.constitution_save_proficient,
+        pc1_0.current_hit_points,
+        pc1_0.death_save_failures,
+        pc1_0.death_save_successes,
+        pc1_0.deception_proficient,
+        pc1_0.dexterity,
+        pc1_0.dexterity_save_proficient,
+        pc1_0.equipment,
+        pc1_0.experience_points,
+        pc1_0.features_and_traits,
+        pc1_0.flaws,
+        pc1_0.gm_notes,
+        pc1_0.history_proficient,
+        pc1_0.hit_dice,
+        pc1_0.ideals,
+        pc1_0.initiative_modifier,
+        pc1_0.insight_proficient,
+        pc1_0.inspiration,
+        pc1_0.intelligence,
+        pc1_0.intelligence_save_proficient,
+        pc1_0.intimidation_proficient,
+        pc1_0.investigation_proficient,
+        pc1_0.is_visible_to_players,
+        kl1_0.character_id,
+        kl1_0.language,
+        pc1_0.known_spells,
+        pc1_0.level,
+        pc1_0.max_hit_points,
+        pc1_0.medicine_proficient,
+        pc1_0.name,
+        pc1_0.nature_proficient,
+        pc1_0.other_notes,
+        pc1_0.other_proficiencies,
+        pc1_0.owner_id,
+        pc1_0.passive_insight,
+        pc1_0.passive_investigation,
+        pc1_0.passive_perception,
+        pc1_0.perception_proficient,
+        pc1_0.performance_proficient,
+        pc1_0.personality_traits,
+        pc1_0.persuasion_proficient,
+        pc1_0.prepared_spells,
+        pc1_0.proficiencies_and_languages,
+        pc1_0.proficiency_bonus,
+        pc1_0.race,
+        pc1_0.religion_proficient,
+        pc1_0.sleight_of_hand_proficient,
+        pc1_0.speed,
+        pc1_0.spell_attack_bonus,
+        pc1_0.spell_savedc,
+        pc1_0.spell_slots,
+        pc1_0.spellcasting_class,
+        pc1_0.spells,
+        pc1_0.stealth_proficient,
+        pc1_0.strength,
+        pc1_0.strength_save_proficient,
+        pc1_0.subclass,
+        pc1_0.survival_proficient,
+        pc1_0.temporary_hit_points,
+        pc1_0.treasure,
+        pc1_0.wisdom,
+        pc1_0.wisdom_save_proficient,
+        pc1_0.world_id 
+    from
+        player_characters pc1_0 
+    left join
+        player_character_languages kl1_0 
+            on pc1_0.id=kl1_0.character_id 
+    where
+        pc1_0.id=?
+Hibernate: 
+    select
+        cp1_0.id 
+    from
+        campaign_players cp1_0 
+    where
+        cp1_0.campaign_id=? 
+        and cp1_0.character_id=? 
+        and cp1_0.status in (?, ?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        c1_0.owner_id,
+        c1_0.status,
+        c1_0.world_id 
+    from
+        campaigns c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        cp1_0.id,
+        cp1_0.campaign_id,
+        cp1_0.character_id,
+        cp1_0.created_at,
+        cp1_0.decision_by_id,
+        cp1_0.message,
+        cp1_0.player_id,
+        cp1_0.status,
+        cp1_0.updated_at 
+    from
+        campaign_players cp1_0 
+    where
+        cp1_0.campaign_id=?
+Hibernate: 
+    select
+        pc1_0.id,
+        pc1_0.acrobatics_proficient,
+        pc1_0.alignment,
+        pc1_0.allies_and_organizations,
+        pc1_0.animal_handling_proficient,
+        pc1_0.appearance,
+        pc1_0.arcana_proficient,
+        pc1_0.armor_class,
+        pc1_0.athletics_proficient,
+        pc1_0.attacks_and_spellcasting,
+        pc1_0.background,
+        pc1_0.backstory,
+        pc1_0.bonds,
+        pc1_0.character_class,
+        pc1_0.charisma,
+        pc1_0.charisma_save_proficient,
+        pc1_0.constitution,
+        pc1_0.constitution_save_proficient,
+        pc1_0.current_hit_points,
+        pc1_0.death_save_failures,
+        pc1_0.death_save_successes,
+        pc1_0.deception_proficient,
+        pc1_0.dexterity,
+        pc1_0.dexterity_save_proficient,
+        pc1_0.equipment,
+        pc1_0.experience_points,
+        pc1_0.features_and_traits,
+        pc1_0.flaws,
+        pc1_0.gm_notes,
+        pc1_0.history_proficient,
+        pc1_0.hit_dice,
+        pc1_0.ideals,
+        pc1_0.initiative_modifier,
+        pc1_0.insight_proficient,
+        pc1_0.inspiration,
+        pc1_0.intelligence,
+        pc1_0.intelligence_save_proficient,
+        pc1_0.intimidation_proficient,
+        pc1_0.investigation_proficient,
+        pc1_0.is_visible_to_players,
+        kl1_0.character_id,
+        kl1_0.language,
+        pc1_0.known_spells,
+        pc1_0.level,
+        pc1_0.max_hit_points,
+        pc1_0.medicine_proficient,
+        pc1_0.name,
+        pc1_0.nature_proficient,
+        pc1_0.other_notes,
+        pc1_0.other_proficiencies,
+        pc1_0.owner_id,
+        pc1_0.passive_insight,
+        pc1_0.passive_investigation,
+        pc1_0.passive_perception,
+        pc1_0.perception_proficient,
+        pc1_0.performance_proficient,
+        pc1_0.personality_traits,
+        pc1_0.persuasion_proficient,
+        pc1_0.prepared_spells,
+        pc1_0.proficiencies_and_languages,
+        pc1_0.proficiency_bonus,
+        pc1_0.race,
+        pc1_0.religion_proficient,
+        pc1_0.sleight_of_hand_proficient,
+        pc1_0.speed,
+        pc1_0.spell_attack_bonus,
+        pc1_0.spell_savedc,
+        pc1_0.spell_slots,
+        pc1_0.spellcasting_class,
+        pc1_0.spells,
+        pc1_0.stealth_proficient,
+        pc1_0.strength,
+        pc1_0.strength_save_proficient,
+        pc1_0.subclass,
+        pc1_0.survival_proficient,
+        pc1_0.temporary_hit_points,
+        pc1_0.treasure,
+        pc1_0.wisdom,
+        pc1_0.wisdom_save_proficient,
+        pc1_0.world_id 
+    from
+        player_characters pc1_0 
+    left join
+        player_character_languages kl1_0 
+            on pc1_0.id=kl1_0.character_id 
+    where
+        pc1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password,
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users u1_0 
+    left join
+        users_roles r1_0 
+            on u1_0.id=r1_0.user_id 
+    left join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        cp1_0.id,
+        cp1_0.campaign_id,
+        cp1_0.character_id,
+        cp1_0.created_at,
+        cp1_0.decision_by_id,
+        cp1_0.message,
+        cp1_0.player_id,
+        cp1_0.status,
+        cp1_0.updated_at 
+    from
+        campaign_players cp1_0 
+    left join
+        campaigns c1_0 
+            on c1_0.id=cp1_0.campaign_id 
+    left join
+        users o1_0 
+            on o1_0.id=c1_0.owner_id 
+    where
+        o1_0.id=? 
+        and cp1_0.status=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        c1_0.owner_id,
+        c1_0.status,
+        c1_0.world_id 
+    from
+        campaigns c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        pc1_0.id,
+        pc1_0.acrobatics_proficient,
+        pc1_0.alignment,
+        pc1_0.allies_and_organizations,
+        pc1_0.animal_handling_proficient,
+        pc1_0.appearance,
+        pc1_0.arcana_proficient,
+        pc1_0.armor_class,
+        pc1_0.athletics_proficient,
+        pc1_0.attacks_and_spellcasting,
+        pc1_0.background,
+        pc1_0.backstory,
+        pc1_0.bonds,
+        pc1_0.character_class,
+        pc1_0.charisma,
+        pc1_0.charisma_save_proficient,
+        pc1_0.constitution,
+        pc1_0.constitution_save_proficient,
+        pc1_0.current_hit_points,
+        pc1_0.death_save_failures,
+        pc1_0.death_save_successes,
+        pc1_0.deception_proficient,
+        pc1_0.dexterity,
+        pc1_0.dexterity_save_proficient,
+        pc1_0.equipment,
+        pc1_0.experience_points,
+        pc1_0.features_and_traits,
+        pc1_0.flaws,
+        pc1_0.gm_notes,
+        pc1_0.history_proficient,
+        pc1_0.hit_dice,
+        pc1_0.ideals,
+        pc1_0.initiative_modifier,
+        pc1_0.insight_proficient,
+        pc1_0.inspiration,
+        pc1_0.intelligence,
+        pc1_0.intelligence_save_proficient,
+        pc1_0.intimidation_proficient,
+        pc1_0.investigation_proficient,
+        pc1_0.is_visible_to_players,
+        kl1_0.character_id,
+        kl1_0.language,
+        pc1_0.known_spells,
+        pc1_0.level,
+        pc1_0.max_hit_points,
+        pc1_0.medicine_proficient,
+        pc1_0.name,
+        pc1_0.nature_proficient,
+        pc1_0.other_notes,
+        pc1_0.other_proficiencies,
+        pc1_0.owner_id,
+        pc1_0.passive_insight,
+        pc1_0.passive_investigation,
+        pc1_0.passive_perception,
+        pc1_0.perception_proficient,
+        pc1_0.performance_proficient,
+        pc1_0.personality_traits,
+        pc1_0.persuasion_proficient,
+        pc1_0.prepared_spells,
+        pc1_0.proficiencies_and_languages,
+        pc1_0.proficiency_bonus,
+        pc1_0.race,
+        pc1_0.religion_proficient,
+        pc1_0.sleight_of_hand_proficient,
+        pc1_0.speed,
+        pc1_0.spell_attack_bonus,
+        pc1_0.spell_savedc,
+        pc1_0.spell_slots,
+        pc1_0.spellcasting_class,
+        pc1_0.spells,
+        pc1_0.stealth_proficient,
+        pc1_0.strength,
+        pc1_0.strength_save_proficient,
+        pc1_0.subclass,
+        pc1_0.survival_proficient,
+        pc1_0.temporary_hit_points,
+        pc1_0.treasure,
+        pc1_0.wisdom,
+        pc1_0.wisdom_save_proficient,
+        pc1_0.world_id 
+    from
+        player_characters pc1_0 
+    left join
+        player_character_languages kl1_0 
+            on pc1_0.id=kl1_0.character_id 
+    where
+        pc1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password,
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users u1_0 
+    left join
+        users_roles r1_0 
+            on u1_0.id=r1_0.user_id 
+    left join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        c1_0.owner_id,
+        c1_0.status,
+        c1_0.world_id 
+    from
+        campaigns c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        cp1_0.id,
+        cp1_0.campaign_id,
+        cp1_0.character_id,
+        cp1_0.created_at,
+        cp1_0.decision_by_id,
+        cp1_0.message,
+        cp1_0.player_id,
+        cp1_0.status,
+        cp1_0.updated_at 
+    from
+        campaign_players cp1_0 
+    where
+        cp1_0.id=? 
+        and cp1_0.campaign_id=?
+Hibernate: 
+    update
+        campaign_players 
+    set
+        campaign_id=?,
+        character_id=?,
+        decision_by_id=?,
+        message=?,
+        player_id=?,
+        status=?,
+        updated_at=? 
+    where
+        id=?
+Hibernate: 
+    select
+        pc1_0.id,
+        pc1_0.acrobatics_proficient,
+        pc1_0.alignment,
+        pc1_0.allies_and_organizations,
+        pc1_0.animal_handling_proficient,
+        pc1_0.appearance,
+        pc1_0.arcana_proficient,
+        pc1_0.armor_class,
+        pc1_0.athletics_proficient,
+        pc1_0.attacks_and_spellcasting,
+        pc1_0.background,
+        pc1_0.backstory,
+        pc1_0.bonds,
+        pc1_0.character_class,
+        pc1_0.charisma,
+        pc1_0.charisma_save_proficient,
+        pc1_0.constitution,
+        pc1_0.constitution_save_proficient,
+        pc1_0.current_hit_points,
+        pc1_0.death_save_failures,
+        pc1_0.death_save_successes,
+        pc1_0.deception_proficient,
+        pc1_0.dexterity,
+        pc1_0.dexterity_save_proficient,
+        pc1_0.equipment,
+        pc1_0.experience_points,
+        pc1_0.features_and_traits,
+        pc1_0.flaws,
+        pc1_0.gm_notes,
+        pc1_0.history_proficient,
+        pc1_0.hit_dice,
+        pc1_0.ideals,
+        pc1_0.initiative_modifier,
+        pc1_0.insight_proficient,
+        pc1_0.inspiration,
+        pc1_0.intelligence,
+        pc1_0.intelligence_save_proficient,
+        pc1_0.intimidation_proficient,
+        pc1_0.investigation_proficient,
+        pc1_0.is_visible_to_players,
+        kl1_0.character_id,
+        kl1_0.language,
+        pc1_0.known_spells,
+        pc1_0.level,
+        pc1_0.max_hit_points,
+        pc1_0.medicine_proficient,
+        pc1_0.name,
+        pc1_0.nature_proficient,
+        pc1_0.other_notes,
+        pc1_0.other_proficiencies,
+        pc1_0.owner_id,
+        pc1_0.passive_insight,
+        pc1_0.passive_investigation,
+        pc1_0.passive_perception,
+        pc1_0.perception_proficient,
+        pc1_0.performance_proficient,
+        pc1_0.personality_traits,
+        pc1_0.persuasion_proficient,
+        pc1_0.prepared_spells,
+        pc1_0.proficiencies_and_languages,
+        pc1_0.proficiency_bonus,
+        pc1_0.race,
+        pc1_0.religion_proficient,
+        pc1_0.sleight_of_hand_proficient,
+        pc1_0.speed,
+        pc1_0.spell_attack_bonus,
+        pc1_0.spell_savedc,
+        pc1_0.spell_slots,
+        pc1_0.spellcasting_class,
+        pc1_0.spells,
+        pc1_0.stealth_proficient,
+        pc1_0.strength,
+        pc1_0.strength_save_proficient,
+        pc1_0.subclass,
+        pc1_0.survival_proficient,
+        pc1_0.temporary_hit_points,
+        pc1_0.treasure,
+        pc1_0.wisdom,
+        pc1_0.wisdom_save_proficient,
+        pc1_0.world_id 
+    from
+        player_characters pc1_0 
+    left join
+        player_character_languages kl1_0 
+            on pc1_0.id=kl1_0.character_id 
+    where
+        pc1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password,
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users u1_0 
+    left join
+        users_roles r1_0 
+            on u1_0.id=r1_0.user_id 
+    left join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        c1_0.owner_id,
+        c1_0.status,
+        c1_0.world_id 
+    from
+        campaigns c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        cp1_0.id,
+        cp1_0.campaign_id,
+        cp1_0.character_id,
+        cp1_0.created_at,
+        cp1_0.decision_by_id,
+        cp1_0.message,
+        cp1_0.player_id,
+        cp1_0.status,
+        cp1_0.updated_at 
+    from
+        campaign_players cp1_0 
+    where
+        cp1_0.campaign_id=? 
+        and cp1_0.player_id=?
+Hibernate: 
+    select
+        pc1_0.id,
+        pc1_0.acrobatics_proficient,
+        pc1_0.alignment,
+        pc1_0.allies_and_organizations,
+        pc1_0.animal_handling_proficient,
+        pc1_0.appearance,
+        pc1_0.arcana_proficient,
+        pc1_0.armor_class,
+        pc1_0.athletics_proficient,
+        pc1_0.attacks_and_spellcasting,
+        pc1_0.background,
+        pc1_0.backstory,
+        pc1_0.bonds,
+        pc1_0.character_class,
+        pc1_0.charisma,
+        pc1_0.charisma_save_proficient,
+        pc1_0.constitution,
+        pc1_0.constitution_save_proficient,
+        pc1_0.current_hit_points,
+        pc1_0.death_save_failures,
+        pc1_0.death_save_successes,
+        pc1_0.deception_proficient,
+        pc1_0.dexterity,
+        pc1_0.dexterity_save_proficient,
+        pc1_0.equipment,
+        pc1_0.experience_points,
+        pc1_0.features_and_traits,
+        pc1_0.flaws,
+        pc1_0.gm_notes,
+        pc1_0.history_proficient,
+        pc1_0.hit_dice,
+        pc1_0.ideals,
+        pc1_0.initiative_modifier,
+        pc1_0.insight_proficient,
+        pc1_0.inspiration,
+        pc1_0.intelligence,
+        pc1_0.intelligence_save_proficient,
+        pc1_0.intimidation_proficient,
+        pc1_0.investigation_proficient,
+        pc1_0.is_visible_to_players,
+        kl1_0.character_id,
+        kl1_0.language,
+        pc1_0.known_spells,
+        pc1_0.level,
+        pc1_0.max_hit_points,
+        pc1_0.medicine_proficient,
+        pc1_0.name,
+        pc1_0.nature_proficient,
+        pc1_0.other_notes,
+        pc1_0.other_proficiencies,
+        pc1_0.owner_id,
+        pc1_0.passive_insight,
+        pc1_0.passive_investigation,
+        pc1_0.passive_perception,
+        pc1_0.perception_proficient,
+        pc1_0.performance_proficient,
+        pc1_0.personality_traits,
+        pc1_0.persuasion_proficient,
+        pc1_0.prepared_spells,
+        pc1_0.proficiencies_and_languages,
+        pc1_0.proficiency_bonus,
+        pc1_0.race,
+        pc1_0.religion_proficient,
+        pc1_0.sleight_of_hand_proficient,
+        pc1_0.speed,
+        pc1_0.spell_attack_bonus,
+        pc1_0.spell_savedc,
+        pc1_0.spell_slots,
+        pc1_0.spellcasting_class,
+        pc1_0.spells,
+        pc1_0.stealth_proficient,
+        pc1_0.strength,
+        pc1_0.strength_save_proficient,
+        pc1_0.subclass,
+        pc1_0.survival_proficient,
+        pc1_0.temporary_hit_points,
+        pc1_0.treasure,
+        pc1_0.wisdom,
+        pc1_0.wisdom_save_proficient,
+        pc1_0.world_id 
+    from
+        player_characters pc1_0 
+    left join
+        player_character_languages kl1_0 
+            on pc1_0.id=kl1_0.character_id 
+    where
+        pc1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password,
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users u1_0 
+    left join
+        users_roles r1_0 
+            on u1_0.id=r1_0.user_id 
+    left join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        c1_0.owner_id,
+        c1_0.status,
+        c1_0.world_id 
+    from
+        campaigns c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        cp1_0.id,
+        cp1_0.campaign_id,
+        cp1_0.character_id,
+        cp1_0.created_at,
+        cp1_0.decision_by_id,
+        cp1_0.message,
+        cp1_0.player_id,
+        cp1_0.status,
+        cp1_0.updated_at 
+    from
+        campaign_players cp1_0 
+    where
+        cp1_0.campaign_id=? 
+        and cp1_0.status=?
+Hibernate: 
+    select
+        pc1_0.id,
+        pc1_0.acrobatics_proficient,
+        pc1_0.alignment,
+        pc1_0.allies_and_organizations,
+        pc1_0.animal_handling_proficient,
+        pc1_0.appearance,
+        pc1_0.arcana_proficient,
+        pc1_0.armor_class,
+        pc1_0.athletics_proficient,
+        pc1_0.attacks_and_spellcasting,
+        pc1_0.background,
+        pc1_0.backstory,
+        pc1_0.bonds,
+        pc1_0.character_class,
+        pc1_0.charisma,
+        pc1_0.charisma_save_proficient,
+        pc1_0.constitution,
+        pc1_0.constitution_save_proficient,
+        pc1_0.current_hit_points,
+        pc1_0.death_save_failures,
+        pc1_0.death_save_successes,
+        pc1_0.deception_proficient,
+        pc1_0.dexterity,
+        pc1_0.dexterity_save_proficient,
+        pc1_0.equipment,
+        pc1_0.experience_points,
+        pc1_0.features_and_traits,
+        pc1_0.flaws,
+        pc1_0.gm_notes,
+        pc1_0.history_proficient,
+        pc1_0.hit_dice,
+        pc1_0.ideals,
+        pc1_0.initiative_modifier,
+        pc1_0.insight_proficient,
+        pc1_0.inspiration,
+        pc1_0.intelligence,
+        pc1_0.intelligence_save_proficient,
+        pc1_0.intimidation_proficient,
+        pc1_0.investigation_proficient,
+        pc1_0.is_visible_to_players,
+        kl1_0.character_id,
+        kl1_0.language,
+        pc1_0.known_spells,
+        pc1_0.level,
+        pc1_0.max_hit_points,
+        pc1_0.medicine_proficient,
+        pc1_0.name,
+        pc1_0.nature_proficient,
+        pc1_0.other_notes,
+        pc1_0.other_proficiencies,
+        pc1_0.owner_id,
+        pc1_0.passive_insight,
+        pc1_0.passive_investigation,
+        pc1_0.passive_perception,
+        pc1_0.perception_proficient,
+        pc1_0.performance_proficient,
+        pc1_0.personality_traits,
+        pc1_0.persuasion_proficient,
+        pc1_0.prepared_spells,
+        pc1_0.proficiencies_and_languages,
+        pc1_0.proficiency_bonus,
+        pc1_0.race,
+        pc1_0.religion_proficient,
+        pc1_0.sleight_of_hand_proficient,
+        pc1_0.speed,
+        pc1_0.spell_attack_bonus,
+        pc1_0.spell_savedc,
+        pc1_0.spell_slots,
+        pc1_0.spellcasting_class,
+        pc1_0.spells,
+        pc1_0.stealth_proficient,
+        pc1_0.strength,
+        pc1_0.strength_save_proficient,
+        pc1_0.subclass,
+        pc1_0.survival_proficient,
+        pc1_0.temporary_hit_points,
+        pc1_0.treasure,
+        pc1_0.wisdom,
+        pc1_0.wisdom_save_proficient,
+        pc1_0.world_id 
+    from
+        player_characters pc1_0 
+    left join
+        player_character_languages kl1_0 
+            on pc1_0.id=kl1_0.character_id 
+    where
+        pc1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password,
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users u1_0 
+    left join
+        users_roles r1_0 
+            on u1_0.id=r1_0.user_id 
+    left join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        cp1_0.id,
+        cp1_0.campaign_id,
+        cp1_0.character_id,
+        cp1_0.created_at,
+        cp1_0.decision_by_id,
+        cp1_0.message,
+        cp1_0.player_id,
+        cp1_0.status,
+        cp1_0.updated_at 
+    from
+        campaign_players cp1_0 
+    where
+        cp1_0.player_id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        c1_0.owner_id,
+        c1_0.status,
+        c1_0.world_id 
+    from
+        campaigns c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        pc1_0.id,
+        pc1_0.acrobatics_proficient,
+        pc1_0.alignment,
+        pc1_0.allies_and_organizations,
+        pc1_0.animal_handling_proficient,
+        pc1_0.appearance,
+        pc1_0.arcana_proficient,
+        pc1_0.armor_class,
+        pc1_0.athletics_proficient,
+        pc1_0.attacks_and_spellcasting,
+        pc1_0.background,
+        pc1_0.backstory,
+        pc1_0.bonds,
+        pc1_0.character_class,
+        pc1_0.charisma,
+        pc1_0.charisma_save_proficient,
+        pc1_0.constitution,
+        pc1_0.constitution_save_proficient,
+        pc1_0.current_hit_points,
+        pc1_0.death_save_failures,
+        pc1_0.death_save_successes,
+        pc1_0.deception_proficient,
+        pc1_0.dexterity,
+        pc1_0.dexterity_save_proficient,
+        pc1_0.equipment,
+        pc1_0.experience_points,
+        pc1_0.features_and_traits,
+        pc1_0.flaws,
+        pc1_0.gm_notes,
+        pc1_0.history_proficient,
+        pc1_0.hit_dice,
+        pc1_0.ideals,
+        pc1_0.initiative_modifier,
+        pc1_0.insight_proficient,
+        pc1_0.inspiration,
+        pc1_0.intelligence,
+        pc1_0.intelligence_save_proficient,
+        pc1_0.intimidation_proficient,
+        pc1_0.investigation_proficient,
+        pc1_0.is_visible_to_players,
+        kl1_0.character_id,
+        kl1_0.language,
+        pc1_0.known_spells,
+        pc1_0.level,
+        pc1_0.max_hit_points,
+        pc1_0.medicine_proficient,
+        pc1_0.name,
+        pc1_0.nature_proficient,
+        pc1_0.other_notes,
+        pc1_0.other_proficiencies,
+        pc1_0.owner_id,
+        pc1_0.passive_insight,
+        pc1_0.passive_investigation,
+        pc1_0.passive_perception,
+        pc1_0.perception_proficient,
+        pc1_0.performance_proficient,
+        pc1_0.personality_traits,
+        pc1_0.persuasion_proficient,
+        pc1_0.prepared_spells,
+        pc1_0.proficiencies_and_languages,
+        pc1_0.proficiency_bonus,
+        pc1_0.race,
+        pc1_0.religion_proficient,
+        pc1_0.sleight_of_hand_proficient,
+        pc1_0.speed,
+        pc1_0.spell_attack_bonus,
+        pc1_0.spell_savedc,
+        pc1_0.spell_slots,
+        pc1_0.spellcasting_class,
+        pc1_0.spells,
+        pc1_0.stealth_proficient,
+        pc1_0.strength,
+        pc1_0.strength_save_proficient,
+        pc1_0.subclass,
+        pc1_0.survival_proficient,
+        pc1_0.temporary_hit_points,
+        pc1_0.treasure,
+        pc1_0.wisdom,
+        pc1_0.wisdom_save_proficient,
+        pc1_0.world_id 
+    from
+        player_characters pc1_0 
+    left join
+        player_character_languages kl1_0 
+            on pc1_0.id=kl1_0.character_id 
+    where
+        pc1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password,
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users u1_0 
+    left join
+        users_roles r1_0 
+            on u1_0.id=r1_0.user_id 
+    left join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        u1_0.id=?
+]]></system-out>
+  </testcase>
+  <testcase name="gm_canUseAggregatedJoinRequestEndpoint" classname="it.univ.ddmanager.campaign.CampaignPlayerIntegrationTest" time="1.689">
+    <system-out><![CDATA[Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+Hibernate: 
+    insert 
+    into
+        users
+        (email, nickname, password) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        users_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password,
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users u1_0 
+    left join
+        users_roles r1_0 
+            on u1_0.id=r1_0.user_id 
+    left join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+Hibernate: 
+    insert 
+    into
+        users
+        (email, nickname, password) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        users_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+Hibernate: 
+    insert 
+    into
+        users
+        (email, nickname, password) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        users_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    insert 
+    into
+        worlds
+        (description, is_public, name, owner_id) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        count(c1_0.id) 
+    from
+        campaigns c1_0 
+    left join
+        worlds w1_0 
+            on w1_0.id=c1_0.world_id 
+    where
+        w1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        w1_0.id,
+        w1_0.description,
+        w1_0.is_public,
+        w1_0.name,
+        w1_0.owner_id 
+    from
+        worlds w1_0 
+    where
+        w1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        c1_0.id 
+    from
+        campaigns c1_0 
+    left join
+        worlds w1_0 
+            on w1_0.id=c1_0.world_id 
+    where
+        w1_0.id=? 
+        and upper(c1_0.name)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        campaigns
+        (description, name, owner_id, status, world_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        w1_0.id,
+        w1_0.description,
+        w1_0.is_public,
+        w1_0.name,
+        w1_0.owner_id 
+    from
+        worlds w1_0 
+    where
+        w1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        c1_0.id 
+    from
+        campaigns c1_0 
+    left join
+        worlds w1_0 
+            on w1_0.id=c1_0.world_id 
+    where
+        w1_0.id=? 
+        and upper(c1_0.name)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        campaigns
+        (description, name, owner_id, status, world_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    insert 
+    into
+        player_characters
+        (acrobatics_proficient, alignment, allies_and_organizations, animal_handling_proficient, appearance, arcana_proficient, armor_class, athletics_proficient, attacks_and_spellcasting, background, backstory, bonds, character_class, charisma, charisma_save_proficient, constitution, constitution_save_proficient, current_hit_points, death_save_failures, death_save_successes, deception_proficient, dexterity, dexterity_save_proficient, equipment, experience_points, features_and_traits, flaws, gm_notes, history_proficient, hit_dice, ideals, initiative_modifier, insight_proficient, inspiration, intelligence, intelligence_save_proficient, intimidation_proficient, investigation_proficient, is_visible_to_players, known_spells, level, max_hit_points, medicine_proficient, name, nature_proficient, other_notes, other_proficiencies, owner_id, passive_insight, passive_investigation, passive_perception, perception_proficient, performance_proficient, personality_traits, persuasion_proficient, prepared_spells, proficiencies_and_languages, proficiency_bonus, race, religion_proficient, sleight_of_hand_proficient, speed, spell_attack_bonus, spell_savedc, spell_slots, spellcasting_class, spells, stealth_proficient, strength, strength_save_proficient, subclass, survival_proficient, temporary_hit_points, treasure, wisdom, wisdom_save_proficient, world_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        player_character_languages
+        (character_id, language) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    insert 
+    into
+        player_characters
+        (acrobatics_proficient, alignment, allies_and_organizations, animal_handling_proficient, appearance, arcana_proficient, armor_class, athletics_proficient, attacks_and_spellcasting, background, backstory, bonds, character_class, charisma, charisma_save_proficient, constitution, constitution_save_proficient, current_hit_points, death_save_failures, death_save_successes, deception_proficient, dexterity, dexterity_save_proficient, equipment, experience_points, features_and_traits, flaws, gm_notes, history_proficient, hit_dice, ideals, initiative_modifier, insight_proficient, inspiration, intelligence, intelligence_save_proficient, intimidation_proficient, investigation_proficient, is_visible_to_players, known_spells, level, max_hit_points, medicine_proficient, name, nature_proficient, other_notes, other_proficiencies, owner_id, passive_insight, passive_investigation, passive_perception, perception_proficient, performance_proficient, personality_traits, persuasion_proficient, prepared_spells, proficiencies_and_languages, proficiency_bonus, race, religion_proficient, sleight_of_hand_proficient, speed, spell_attack_bonus, spell_savedc, spell_slots, spellcasting_class, spells, stealth_proficient, strength, strength_save_proficient, subclass, survival_proficient, temporary_hit_points, treasure, wisdom, wisdom_save_proficient, world_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        player_character_languages
+        (character_id, language) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        c1_0.owner_id,
+        c1_0.status,
+        c1_0.world_id 
+    from
+        campaigns c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        pc1_0.id,
+        pc1_0.acrobatics_proficient,
+        pc1_0.alignment,
+        pc1_0.allies_and_organizations,
+        pc1_0.animal_handling_proficient,
+        pc1_0.appearance,
+        pc1_0.arcana_proficient,
+        pc1_0.armor_class,
+        pc1_0.athletics_proficient,
+        pc1_0.attacks_and_spellcasting,
+        pc1_0.background,
+        pc1_0.backstory,
+        pc1_0.bonds,
+        pc1_0.character_class,
+        pc1_0.charisma,
+        pc1_0.charisma_save_proficient,
+        pc1_0.constitution,
+        pc1_0.constitution_save_proficient,
+        pc1_0.current_hit_points,
+        pc1_0.death_save_failures,
+        pc1_0.death_save_successes,
+        pc1_0.deception_proficient,
+        pc1_0.dexterity,
+        pc1_0.dexterity_save_proficient,
+        pc1_0.equipment,
+        pc1_0.experience_points,
+        pc1_0.features_and_traits,
+        pc1_0.flaws,
+        pc1_0.gm_notes,
+        pc1_0.history_proficient,
+        pc1_0.hit_dice,
+        pc1_0.ideals,
+        pc1_0.initiative_modifier,
+        pc1_0.insight_proficient,
+        pc1_0.inspiration,
+        pc1_0.intelligence,
+        pc1_0.intelligence_save_proficient,
+        pc1_0.intimidation_proficient,
+        pc1_0.investigation_proficient,
+        pc1_0.is_visible_to_players,
+        kl1_0.character_id,
+        kl1_0.language,
+        pc1_0.known_spells,
+        pc1_0.level,
+        pc1_0.max_hit_points,
+        pc1_0.medicine_proficient,
+        pc1_0.name,
+        pc1_0.nature_proficient,
+        pc1_0.other_notes,
+        pc1_0.other_proficiencies,
+        pc1_0.owner_id,
+        pc1_0.passive_insight,
+        pc1_0.passive_investigation,
+        pc1_0.passive_perception,
+        pc1_0.perception_proficient,
+        pc1_0.performance_proficient,
+        pc1_0.personality_traits,
+        pc1_0.persuasion_proficient,
+        pc1_0.prepared_spells,
+        pc1_0.proficiencies_and_languages,
+        pc1_0.proficiency_bonus,
+        pc1_0.race,
+        pc1_0.religion_proficient,
+        pc1_0.sleight_of_hand_proficient,
+        pc1_0.speed,
+        pc1_0.spell_attack_bonus,
+        pc1_0.spell_savedc,
+        pc1_0.spell_slots,
+        pc1_0.spellcasting_class,
+        pc1_0.spells,
+        pc1_0.stealth_proficient,
+        pc1_0.strength,
+        pc1_0.strength_save_proficient,
+        pc1_0.subclass,
+        pc1_0.survival_proficient,
+        pc1_0.temporary_hit_points,
+        pc1_0.treasure,
+        pc1_0.wisdom,
+        pc1_0.wisdom_save_proficient,
+        pc1_0.world_id 
+    from
+        player_characters pc1_0 
+    left join
+        player_character_languages kl1_0 
+            on pc1_0.id=kl1_0.character_id 
+    where
+        pc1_0.id=?
+Hibernate: 
+    select
+        cp1_0.id 
+    from
+        campaign_players cp1_0 
+    where
+        cp1_0.campaign_id=? 
+        and cp1_0.character_id=? 
+        and cp1_0.status in (?, ?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        campaign_players
+        (campaign_id, character_id, created_at, decision_by_id, message, player_id, status, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        c1_0.owner_id,
+        c1_0.status,
+        c1_0.world_id 
+    from
+        campaigns c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        pc1_0.id,
+        pc1_0.acrobatics_proficient,
+        pc1_0.alignment,
+        pc1_0.allies_and_organizations,
+        pc1_0.animal_handling_proficient,
+        pc1_0.appearance,
+        pc1_0.arcana_proficient,
+        pc1_0.armor_class,
+        pc1_0.athletics_proficient,
+        pc1_0.attacks_and_spellcasting,
+        pc1_0.background,
+        pc1_0.backstory,
+        pc1_0.bonds,
+        pc1_0.character_class,
+        pc1_0.charisma,
+        pc1_0.charisma_save_proficient,
+        pc1_0.constitution,
+        pc1_0.constitution_save_proficient,
+        pc1_0.current_hit_points,
+        pc1_0.death_save_failures,
+        pc1_0.death_save_successes,
+        pc1_0.deception_proficient,
+        pc1_0.dexterity,
+        pc1_0.dexterity_save_proficient,
+        pc1_0.equipment,
+        pc1_0.experience_points,
+        pc1_0.features_and_traits,
+        pc1_0.flaws,
+        pc1_0.gm_notes,
+        pc1_0.history_proficient,
+        pc1_0.hit_dice,
+        pc1_0.ideals,
+        pc1_0.initiative_modifier,
+        pc1_0.insight_proficient,
+        pc1_0.inspiration,
+        pc1_0.intelligence,
+        pc1_0.intelligence_save_proficient,
+        pc1_0.intimidation_proficient,
+        pc1_0.investigation_proficient,
+        pc1_0.is_visible_to_players,
+        kl1_0.character_id,
+        kl1_0.language,
+        pc1_0.known_spells,
+        pc1_0.level,
+        pc1_0.max_hit_points,
+        pc1_0.medicine_proficient,
+        pc1_0.name,
+        pc1_0.nature_proficient,
+        pc1_0.other_notes,
+        pc1_0.other_proficiencies,
+        pc1_0.owner_id,
+        pc1_0.passive_insight,
+        pc1_0.passive_investigation,
+        pc1_0.passive_perception,
+        pc1_0.perception_proficient,
+        pc1_0.performance_proficient,
+        pc1_0.personality_traits,
+        pc1_0.persuasion_proficient,
+        pc1_0.prepared_spells,
+        pc1_0.proficiencies_and_languages,
+        pc1_0.proficiency_bonus,
+        pc1_0.race,
+        pc1_0.religion_proficient,
+        pc1_0.sleight_of_hand_proficient,
+        pc1_0.speed,
+        pc1_0.spell_attack_bonus,
+        pc1_0.spell_savedc,
+        pc1_0.spell_slots,
+        pc1_0.spellcasting_class,
+        pc1_0.spells,
+        pc1_0.stealth_proficient,
+        pc1_0.strength,
+        pc1_0.strength_save_proficient,
+        pc1_0.subclass,
+        pc1_0.survival_proficient,
+        pc1_0.temporary_hit_points,
+        pc1_0.treasure,
+        pc1_0.wisdom,
+        pc1_0.wisdom_save_proficient,
+        pc1_0.world_id 
+    from
+        player_characters pc1_0 
+    left join
+        player_character_languages kl1_0 
+            on pc1_0.id=kl1_0.character_id 
+    where
+        pc1_0.id=?
+Hibernate: 
+    select
+        cp1_0.id 
+    from
+        campaign_players cp1_0 
+    where
+        cp1_0.campaign_id=? 
+        and cp1_0.character_id=? 
+        and cp1_0.status in (?, ?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        campaign_players
+        (campaign_id, character_id, created_at, decision_by_id, message, player_id, status, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        cp1_0.id,
+        cp1_0.campaign_id,
+        cp1_0.character_id,
+        cp1_0.created_at,
+        cp1_0.decision_by_id,
+        cp1_0.message,
+        cp1_0.player_id,
+        cp1_0.status,
+        cp1_0.updated_at 
+    from
+        campaign_players cp1_0 
+    left join
+        campaigns c1_0 
+            on c1_0.id=cp1_0.campaign_id 
+    left join
+        users o1_0 
+            on o1_0.id=c1_0.owner_id 
+    where
+        o1_0.id=? 
+        and cp1_0.status=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        c1_0.owner_id,
+        c1_0.status,
+        c1_0.world_id 
+    from
+        campaigns c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        pc1_0.id,
+        pc1_0.acrobatics_proficient,
+        pc1_0.alignment,
+        pc1_0.allies_and_organizations,
+        pc1_0.animal_handling_proficient,
+        pc1_0.appearance,
+        pc1_0.arcana_proficient,
+        pc1_0.armor_class,
+        pc1_0.athletics_proficient,
+        pc1_0.attacks_and_spellcasting,
+        pc1_0.background,
+        pc1_0.backstory,
+        pc1_0.bonds,
+        pc1_0.character_class,
+        pc1_0.charisma,
+        pc1_0.charisma_save_proficient,
+        pc1_0.constitution,
+        pc1_0.constitution_save_proficient,
+        pc1_0.current_hit_points,
+        pc1_0.death_save_failures,
+        pc1_0.death_save_successes,
+        pc1_0.deception_proficient,
+        pc1_0.dexterity,
+        pc1_0.dexterity_save_proficient,
+        pc1_0.equipment,
+        pc1_0.experience_points,
+        pc1_0.features_and_traits,
+        pc1_0.flaws,
+        pc1_0.gm_notes,
+        pc1_0.history_proficient,
+        pc1_0.hit_dice,
+        pc1_0.ideals,
+        pc1_0.initiative_modifier,
+        pc1_0.insight_proficient,
+        pc1_0.inspiration,
+        pc1_0.intelligence,
+        pc1_0.intelligence_save_proficient,
+        pc1_0.intimidation_proficient,
+        pc1_0.investigation_proficient,
+        pc1_0.is_visible_to_players,
+        kl1_0.character_id,
+        kl1_0.language,
+        pc1_0.known_spells,
+        pc1_0.level,
+        pc1_0.max_hit_points,
+        pc1_0.medicine_proficient,
+        pc1_0.name,
+        pc1_0.nature_proficient,
+        pc1_0.other_notes,
+        pc1_0.other_proficiencies,
+        pc1_0.owner_id,
+        pc1_0.passive_insight,
+        pc1_0.passive_investigation,
+        pc1_0.passive_perception,
+        pc1_0.perception_proficient,
+        pc1_0.performance_proficient,
+        pc1_0.personality_traits,
+        pc1_0.persuasion_proficient,
+        pc1_0.prepared_spells,
+        pc1_0.proficiencies_and_languages,
+        pc1_0.proficiency_bonus,
+        pc1_0.race,
+        pc1_0.religion_proficient,
+        pc1_0.sleight_of_hand_proficient,
+        pc1_0.speed,
+        pc1_0.spell_attack_bonus,
+        pc1_0.spell_savedc,
+        pc1_0.spell_slots,
+        pc1_0.spellcasting_class,
+        pc1_0.spells,
+        pc1_0.stealth_proficient,
+        pc1_0.strength,
+        pc1_0.strength_save_proficient,
+        pc1_0.subclass,
+        pc1_0.survival_proficient,
+        pc1_0.temporary_hit_points,
+        pc1_0.treasure,
+        pc1_0.wisdom,
+        pc1_0.wisdom_save_proficient,
+        pc1_0.world_id 
+    from
+        player_characters pc1_0 
+    left join
+        player_character_languages kl1_0 
+            on pc1_0.id=kl1_0.character_id 
+    where
+        pc1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password,
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users u1_0 
+    left join
+        users_roles r1_0 
+            on u1_0.id=r1_0.user_id 
+    left join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        c1_0.owner_id,
+        c1_0.status,
+        c1_0.world_id 
+    from
+        campaigns c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        pc1_0.id,
+        pc1_0.acrobatics_proficient,
+        pc1_0.alignment,
+        pc1_0.allies_and_organizations,
+        pc1_0.animal_handling_proficient,
+        pc1_0.appearance,
+        pc1_0.arcana_proficient,
+        pc1_0.armor_class,
+        pc1_0.athletics_proficient,
+        pc1_0.attacks_and_spellcasting,
+        pc1_0.background,
+        pc1_0.backstory,
+        pc1_0.bonds,
+        pc1_0.character_class,
+        pc1_0.charisma,
+        pc1_0.charisma_save_proficient,
+        pc1_0.constitution,
+        pc1_0.constitution_save_proficient,
+        pc1_0.current_hit_points,
+        pc1_0.death_save_failures,
+        pc1_0.death_save_successes,
+        pc1_0.deception_proficient,
+        pc1_0.dexterity,
+        pc1_0.dexterity_save_proficient,
+        pc1_0.equipment,
+        pc1_0.experience_points,
+        pc1_0.features_and_traits,
+        pc1_0.flaws,
+        pc1_0.gm_notes,
+        pc1_0.history_proficient,
+        pc1_0.hit_dice,
+        pc1_0.ideals,
+        pc1_0.initiative_modifier,
+        pc1_0.insight_proficient,
+        pc1_0.inspiration,
+        pc1_0.intelligence,
+        pc1_0.intelligence_save_proficient,
+        pc1_0.intimidation_proficient,
+        pc1_0.investigation_proficient,
+        pc1_0.is_visible_to_players,
+        kl1_0.character_id,
+        kl1_0.language,
+        pc1_0.known_spells,
+        pc1_0.level,
+        pc1_0.max_hit_points,
+        pc1_0.medicine_proficient,
+        pc1_0.name,
+        pc1_0.nature_proficient,
+        pc1_0.other_notes,
+        pc1_0.other_proficiencies,
+        pc1_0.owner_id,
+        pc1_0.passive_insight,
+        pc1_0.passive_investigation,
+        pc1_0.passive_perception,
+        pc1_0.perception_proficient,
+        pc1_0.performance_proficient,
+        pc1_0.personality_traits,
+        pc1_0.persuasion_proficient,
+        pc1_0.prepared_spells,
+        pc1_0.proficiencies_and_languages,
+        pc1_0.proficiency_bonus,
+        pc1_0.race,
+        pc1_0.religion_proficient,
+        pc1_0.sleight_of_hand_proficient,
+        pc1_0.speed,
+        pc1_0.spell_attack_bonus,
+        pc1_0.spell_savedc,
+        pc1_0.spell_slots,
+        pc1_0.spellcasting_class,
+        pc1_0.spells,
+        pc1_0.stealth_proficient,
+        pc1_0.strength,
+        pc1_0.strength_save_proficient,
+        pc1_0.subclass,
+        pc1_0.survival_proficient,
+        pc1_0.temporary_hit_points,
+        pc1_0.treasure,
+        pc1_0.wisdom,
+        pc1_0.wisdom_save_proficient,
+        pc1_0.world_id 
+    from
+        player_characters pc1_0 
+    left join
+        player_character_languages kl1_0 
+            on pc1_0.id=kl1_0.character_id 
+    where
+        pc1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password,
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users u1_0 
+    left join
+        users_roles r1_0 
+            on u1_0.id=r1_0.user_id 
+    left join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        c1_0.owner_id,
+        c1_0.status,
+        c1_0.world_id 
+    from
+        campaigns c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        cp1_0.id,
+        cp1_0.campaign_id,
+        cp1_0.character_id,
+        cp1_0.created_at,
+        cp1_0.decision_by_id,
+        cp1_0.message,
+        cp1_0.player_id,
+        cp1_0.status,
+        cp1_0.updated_at 
+    from
+        campaign_players cp1_0 
+    where
+        cp1_0.id=? 
+        and cp1_0.campaign_id=?
+Hibernate: 
+    update
+        campaign_players 
+    set
+        campaign_id=?,
+        character_id=?,
+        decision_by_id=?,
+        message=?,
+        player_id=?,
+        status=?,
+        updated_at=? 
+    where
+        id=?
+Hibernate: 
+    select
+        pc1_0.id,
+        pc1_0.acrobatics_proficient,
+        pc1_0.alignment,
+        pc1_0.allies_and_organizations,
+        pc1_0.animal_handling_proficient,
+        pc1_0.appearance,
+        pc1_0.arcana_proficient,
+        pc1_0.armor_class,
+        pc1_0.athletics_proficient,
+        pc1_0.attacks_and_spellcasting,
+        pc1_0.background,
+        pc1_0.backstory,
+        pc1_0.bonds,
+        pc1_0.character_class,
+        pc1_0.charisma,
+        pc1_0.charisma_save_proficient,
+        pc1_0.constitution,
+        pc1_0.constitution_save_proficient,
+        pc1_0.current_hit_points,
+        pc1_0.death_save_failures,
+        pc1_0.death_save_successes,
+        pc1_0.deception_proficient,
+        pc1_0.dexterity,
+        pc1_0.dexterity_save_proficient,
+        pc1_0.equipment,
+        pc1_0.experience_points,
+        pc1_0.features_and_traits,
+        pc1_0.flaws,
+        pc1_0.gm_notes,
+        pc1_0.history_proficient,
+        pc1_0.hit_dice,
+        pc1_0.ideals,
+        pc1_0.initiative_modifier,
+        pc1_0.insight_proficient,
+        pc1_0.inspiration,
+        pc1_0.intelligence,
+        pc1_0.intelligence_save_proficient,
+        pc1_0.intimidation_proficient,
+        pc1_0.investigation_proficient,
+        pc1_0.is_visible_to_players,
+        kl1_0.character_id,
+        kl1_0.language,
+        pc1_0.known_spells,
+        pc1_0.level,
+        pc1_0.max_hit_points,
+        pc1_0.medicine_proficient,
+        pc1_0.name,
+        pc1_0.nature_proficient,
+        pc1_0.other_notes,
+        pc1_0.other_proficiencies,
+        pc1_0.owner_id,
+        pc1_0.passive_insight,
+        pc1_0.passive_investigation,
+        pc1_0.passive_perception,
+        pc1_0.perception_proficient,
+        pc1_0.performance_proficient,
+        pc1_0.personality_traits,
+        pc1_0.persuasion_proficient,
+        pc1_0.prepared_spells,
+        pc1_0.proficiencies_and_languages,
+        pc1_0.proficiency_bonus,
+        pc1_0.race,
+        pc1_0.religion_proficient,
+        pc1_0.sleight_of_hand_proficient,
+        pc1_0.speed,
+        pc1_0.spell_attack_bonus,
+        pc1_0.spell_savedc,
+        pc1_0.spell_slots,
+        pc1_0.spellcasting_class,
+        pc1_0.spells,
+        pc1_0.stealth_proficient,
+        pc1_0.strength,
+        pc1_0.strength_save_proficient,
+        pc1_0.subclass,
+        pc1_0.survival_proficient,
+        pc1_0.temporary_hit_points,
+        pc1_0.treasure,
+        pc1_0.wisdom,
+        pc1_0.wisdom_save_proficient,
+        pc1_0.world_id 
+    from
+        player_characters pc1_0 
+    left join
+        player_character_languages kl1_0 
+            on pc1_0.id=kl1_0.character_id 
+    where
+        pc1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password,
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users u1_0 
+    left join
+        users_roles r1_0 
+            on u1_0.id=r1_0.user_id 
+    left join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        cp1_0.id,
+        cp1_0.campaign_id,
+        cp1_0.character_id,
+        cp1_0.created_at,
+        cp1_0.decision_by_id,
+        cp1_0.message,
+        cp1_0.player_id,
+        cp1_0.status,
+        cp1_0.updated_at 
+    from
+        campaign_players cp1_0 
+    left join
+        campaigns c1_0 
+            on c1_0.id=cp1_0.campaign_id 
+    left join
+        users o1_0 
+            on o1_0.id=c1_0.owner_id 
+    where
+        o1_0.id=? 
+        and cp1_0.status=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        c1_0.owner_id,
+        c1_0.status,
+        c1_0.world_id 
+    from
+        campaigns c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        pc1_0.id,
+        pc1_0.acrobatics_proficient,
+        pc1_0.alignment,
+        pc1_0.allies_and_organizations,
+        pc1_0.animal_handling_proficient,
+        pc1_0.appearance,
+        pc1_0.arcana_proficient,
+        pc1_0.armor_class,
+        pc1_0.athletics_proficient,
+        pc1_0.attacks_and_spellcasting,
+        pc1_0.background,
+        pc1_0.backstory,
+        pc1_0.bonds,
+        pc1_0.character_class,
+        pc1_0.charisma,
+        pc1_0.charisma_save_proficient,
+        pc1_0.constitution,
+        pc1_0.constitution_save_proficient,
+        pc1_0.current_hit_points,
+        pc1_0.death_save_failures,
+        pc1_0.death_save_successes,
+        pc1_0.deception_proficient,
+        pc1_0.dexterity,
+        pc1_0.dexterity_save_proficient,
+        pc1_0.equipment,
+        pc1_0.experience_points,
+        pc1_0.features_and_traits,
+        pc1_0.flaws,
+        pc1_0.gm_notes,
+        pc1_0.history_proficient,
+        pc1_0.hit_dice,
+        pc1_0.ideals,
+        pc1_0.initiative_modifier,
+        pc1_0.insight_proficient,
+        pc1_0.inspiration,
+        pc1_0.intelligence,
+        pc1_0.intelligence_save_proficient,
+        pc1_0.intimidation_proficient,
+        pc1_0.investigation_proficient,
+        pc1_0.is_visible_to_players,
+        kl1_0.character_id,
+        kl1_0.language,
+        pc1_0.known_spells,
+        pc1_0.level,
+        pc1_0.max_hit_points,
+        pc1_0.medicine_proficient,
+        pc1_0.name,
+        pc1_0.nature_proficient,
+        pc1_0.other_notes,
+        pc1_0.other_proficiencies,
+        pc1_0.owner_id,
+        pc1_0.passive_insight,
+        pc1_0.passive_investigation,
+        pc1_0.passive_perception,
+        pc1_0.perception_proficient,
+        pc1_0.performance_proficient,
+        pc1_0.personality_traits,
+        pc1_0.persuasion_proficient,
+        pc1_0.prepared_spells,
+        pc1_0.proficiencies_and_languages,
+        pc1_0.proficiency_bonus,
+        pc1_0.race,
+        pc1_0.religion_proficient,
+        pc1_0.sleight_of_hand_proficient,
+        pc1_0.speed,
+        pc1_0.spell_attack_bonus,
+        pc1_0.spell_savedc,
+        pc1_0.spell_slots,
+        pc1_0.spellcasting_class,
+        pc1_0.spells,
+        pc1_0.stealth_proficient,
+        pc1_0.strength,
+        pc1_0.strength_save_proficient,
+        pc1_0.subclass,
+        pc1_0.survival_proficient,
+        pc1_0.temporary_hit_points,
+        pc1_0.treasure,
+        pc1_0.wisdom,
+        pc1_0.wisdom_save_proficient,
+        pc1_0.world_id 
+    from
+        player_characters pc1_0 
+    left join
+        player_character_languages kl1_0 
+            on pc1_0.id=kl1_0.character_id 
+    where
+        pc1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password,
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users u1_0 
+    left join
+        users_roles r1_0 
+            on u1_0.id=r1_0.user_id 
+    left join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        u1_0.id=?
+]]></system-out>
+  </testcase>
+  <testcase name="joinRequestsMy_returnsDataForPlayersAndHandlesPermissions" classname="it.univ.ddmanager.campaign.CampaignPlayerIntegrationTest" time="1.039">
+    <system-out><![CDATA[Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+Hibernate: 
+    insert 
+    into
+        users
+        (email, nickname, password) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        users_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password,
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users u1_0 
+    left join
+        users_roles r1_0 
+            on u1_0.id=r1_0.user_id 
+    left join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+Hibernate: 
+    insert 
+    into
+        users
+        (email, nickname, password) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        users_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        cp1_0.id,
+        cp1_0.campaign_id,
+        cp1_0.character_id,
+        cp1_0.created_at,
+        cp1_0.decision_by_id,
+        cp1_0.message,
+        cp1_0.player_id,
+        cp1_0.status,
+        cp1_0.updated_at 
+    from
+        campaign_players cp1_0 
+    where
+        cp1_0.player_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    insert 
+    into
+        worlds
+        (description, is_public, name, owner_id) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        count(c1_0.id) 
+    from
+        campaigns c1_0 
+    left join
+        worlds w1_0 
+            on w1_0.id=c1_0.world_id 
+    where
+        w1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        w1_0.id,
+        w1_0.description,
+        w1_0.is_public,
+        w1_0.name,
+        w1_0.owner_id 
+    from
+        worlds w1_0 
+    where
+        w1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        c1_0.id 
+    from
+        campaigns c1_0 
+    left join
+        worlds w1_0 
+            on w1_0.id=c1_0.world_id 
+    where
+        w1_0.id=? 
+        and upper(c1_0.name)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        campaigns
+        (description, name, owner_id, status, world_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    insert 
+    into
+        player_characters
+        (acrobatics_proficient, alignment, allies_and_organizations, animal_handling_proficient, appearance, arcana_proficient, armor_class, athletics_proficient, attacks_and_spellcasting, background, backstory, bonds, character_class, charisma, charisma_save_proficient, constitution, constitution_save_proficient, current_hit_points, death_save_failures, death_save_successes, deception_proficient, dexterity, dexterity_save_proficient, equipment, experience_points, features_and_traits, flaws, gm_notes, history_proficient, hit_dice, ideals, initiative_modifier, insight_proficient, inspiration, intelligence, intelligence_save_proficient, intimidation_proficient, investigation_proficient, is_visible_to_players, known_spells, level, max_hit_points, medicine_proficient, name, nature_proficient, other_notes, other_proficiencies, owner_id, passive_insight, passive_investigation, passive_perception, perception_proficient, performance_proficient, personality_traits, persuasion_proficient, prepared_spells, proficiencies_and_languages, proficiency_bonus, race, religion_proficient, sleight_of_hand_proficient, speed, spell_attack_bonus, spell_savedc, spell_slots, spellcasting_class, spells, stealth_proficient, strength, strength_save_proficient, subclass, survival_proficient, temporary_hit_points, treasure, wisdom, wisdom_save_proficient, world_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        player_character_languages
+        (character_id, language) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        c1_0.owner_id,
+        c1_0.status,
+        c1_0.world_id 
+    from
+        campaigns c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        pc1_0.id,
+        pc1_0.acrobatics_proficient,
+        pc1_0.alignment,
+        pc1_0.allies_and_organizations,
+        pc1_0.animal_handling_proficient,
+        pc1_0.appearance,
+        pc1_0.arcana_proficient,
+        pc1_0.armor_class,
+        pc1_0.athletics_proficient,
+        pc1_0.attacks_and_spellcasting,
+        pc1_0.background,
+        pc1_0.backstory,
+        pc1_0.bonds,
+        pc1_0.character_class,
+        pc1_0.charisma,
+        pc1_0.charisma_save_proficient,
+        pc1_0.constitution,
+        pc1_0.constitution_save_proficient,
+        pc1_0.current_hit_points,
+        pc1_0.death_save_failures,
+        pc1_0.death_save_successes,
+        pc1_0.deception_proficient,
+        pc1_0.dexterity,
+        pc1_0.dexterity_save_proficient,
+        pc1_0.equipment,
+        pc1_0.experience_points,
+        pc1_0.features_and_traits,
+        pc1_0.flaws,
+        pc1_0.gm_notes,
+        pc1_0.history_proficient,
+        pc1_0.hit_dice,
+        pc1_0.ideals,
+        pc1_0.initiative_modifier,
+        pc1_0.insight_proficient,
+        pc1_0.inspiration,
+        pc1_0.intelligence,
+        pc1_0.intelligence_save_proficient,
+        pc1_0.intimidation_proficient,
+        pc1_0.investigation_proficient,
+        pc1_0.is_visible_to_players,
+        kl1_0.character_id,
+        kl1_0.language,
+        pc1_0.known_spells,
+        pc1_0.level,
+        pc1_0.max_hit_points,
+        pc1_0.medicine_proficient,
+        pc1_0.name,
+        pc1_0.nature_proficient,
+        pc1_0.other_notes,
+        pc1_0.other_proficiencies,
+        pc1_0.owner_id,
+        pc1_0.passive_insight,
+        pc1_0.passive_investigation,
+        pc1_0.passive_perception,
+        pc1_0.perception_proficient,
+        pc1_0.performance_proficient,
+        pc1_0.personality_traits,
+        pc1_0.persuasion_proficient,
+        pc1_0.prepared_spells,
+        pc1_0.proficiencies_and_languages,
+        pc1_0.proficiency_bonus,
+        pc1_0.race,
+        pc1_0.religion_proficient,
+        pc1_0.sleight_of_hand_proficient,
+        pc1_0.speed,
+        pc1_0.spell_attack_bonus,
+        pc1_0.spell_savedc,
+        pc1_0.spell_slots,
+        pc1_0.spellcasting_class,
+        pc1_0.spells,
+        pc1_0.stealth_proficient,
+        pc1_0.strength,
+        pc1_0.strength_save_proficient,
+        pc1_0.subclass,
+        pc1_0.survival_proficient,
+        pc1_0.temporary_hit_points,
+        pc1_0.treasure,
+        pc1_0.wisdom,
+        pc1_0.wisdom_save_proficient,
+        pc1_0.world_id 
+    from
+        player_characters pc1_0 
+    left join
+        player_character_languages kl1_0 
+            on pc1_0.id=kl1_0.character_id 
+    where
+        pc1_0.id=?
+Hibernate: 
+    select
+        cp1_0.id 
+    from
+        campaign_players cp1_0 
+    where
+        cp1_0.campaign_id=? 
+        and cp1_0.character_id=? 
+        and cp1_0.status in (?, ?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        campaign_players
+        (campaign_id, character_id, created_at, decision_by_id, message, player_id, status, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        cp1_0.id,
+        cp1_0.campaign_id,
+        cp1_0.character_id,
+        cp1_0.created_at,
+        cp1_0.decision_by_id,
+        cp1_0.message,
+        cp1_0.player_id,
+        cp1_0.status,
+        cp1_0.updated_at 
+    from
+        campaign_players cp1_0 
+    where
+        cp1_0.player_id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        c1_0.owner_id,
+        c1_0.status,
+        c1_0.world_id 
+    from
+        campaigns c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        pc1_0.id,
+        pc1_0.acrobatics_proficient,
+        pc1_0.alignment,
+        pc1_0.allies_and_organizations,
+        pc1_0.animal_handling_proficient,
+        pc1_0.appearance,
+        pc1_0.arcana_proficient,
+        pc1_0.armor_class,
+        pc1_0.athletics_proficient,
+        pc1_0.attacks_and_spellcasting,
+        pc1_0.background,
+        pc1_0.backstory,
+        pc1_0.bonds,
+        pc1_0.character_class,
+        pc1_0.charisma,
+        pc1_0.charisma_save_proficient,
+        pc1_0.constitution,
+        pc1_0.constitution_save_proficient,
+        pc1_0.current_hit_points,
+        pc1_0.death_save_failures,
+        pc1_0.death_save_successes,
+        pc1_0.deception_proficient,
+        pc1_0.dexterity,
+        pc1_0.dexterity_save_proficient,
+        pc1_0.equipment,
+        pc1_0.experience_points,
+        pc1_0.features_and_traits,
+        pc1_0.flaws,
+        pc1_0.gm_notes,
+        pc1_0.history_proficient,
+        pc1_0.hit_dice,
+        pc1_0.ideals,
+        pc1_0.initiative_modifier,
+        pc1_0.insight_proficient,
+        pc1_0.inspiration,
+        pc1_0.intelligence,
+        pc1_0.intelligence_save_proficient,
+        pc1_0.intimidation_proficient,
+        pc1_0.investigation_proficient,
+        pc1_0.is_visible_to_players,
+        kl1_0.character_id,
+        kl1_0.language,
+        pc1_0.known_spells,
+        pc1_0.level,
+        pc1_0.max_hit_points,
+        pc1_0.medicine_proficient,
+        pc1_0.name,
+        pc1_0.nature_proficient,
+        pc1_0.other_notes,
+        pc1_0.other_proficiencies,
+        pc1_0.owner_id,
+        pc1_0.passive_insight,
+        pc1_0.passive_investigation,
+        pc1_0.passive_perception,
+        pc1_0.perception_proficient,
+        pc1_0.performance_proficient,
+        pc1_0.personality_traits,
+        pc1_0.persuasion_proficient,
+        pc1_0.prepared_spells,
+        pc1_0.proficiencies_and_languages,
+        pc1_0.proficiency_bonus,
+        pc1_0.race,
+        pc1_0.religion_proficient,
+        pc1_0.sleight_of_hand_proficient,
+        pc1_0.speed,
+        pc1_0.spell_attack_bonus,
+        pc1_0.spell_savedc,
+        pc1_0.spell_slots,
+        pc1_0.spellcasting_class,
+        pc1_0.spells,
+        pc1_0.stealth_proficient,
+        pc1_0.strength,
+        pc1_0.strength_save_proficient,
+        pc1_0.subclass,
+        pc1_0.survival_proficient,
+        pc1_0.temporary_hit_points,
+        pc1_0.treasure,
+        pc1_0.wisdom,
+        pc1_0.wisdom_save_proficient,
+        pc1_0.world_id 
+    from
+        player_characters pc1_0 
+    left join
+        player_character_languages kl1_0 
+            on pc1_0.id=kl1_0.character_id 
+    where
+        pc1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        users_roles r1_0 
+    join
+        roles r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+]]></system-out>
+  </testcase>
+</testsuite>

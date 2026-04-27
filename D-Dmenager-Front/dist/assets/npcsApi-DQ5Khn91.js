@@ -1,0 +1,1 @@
+import{k as s}from"./index-B09N_abI.js";const e=async()=>{const{data:t}=await s.get("/npcs");return t},p=async t=>{const{data:a}=await s.get(`/npcs/world/${t}`);return a},o=async t=>{const{data:a}=await s.post("/npcs",t);return a},r=async(t,a)=>{const{data:c}=await s.put(`/npcs/${t}`,a);return c},d=async t=>{await s.delete(`/npcs/${t}`)};export{p as a,o as c,d,e as g,r as u};

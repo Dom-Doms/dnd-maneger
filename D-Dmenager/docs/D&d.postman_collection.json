@@ -1,0 +1,1240 @@
+{
+  "info": {
+    "_postman_id": "1299c4b6-13d4-441f-b0a7-714342eebf68",
+    "name": "D&D Manager API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"DM@example.com\",\n  \"password\": \"DM\",\n  \"nickname\": \"Test master\",\n  \"role\": \"DM\"\n}"
+            },
+            "url": "http://localhost:8080/api/auth/register"
+          }
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"DM@example.com\",\n  \"password\": \"DM\"\n}"
+            },
+            "url": "http://localhost:8080/api/auth/login"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "const json = pm.response.json();",
+                  "if (json && json.token) {",
+                  "    pm.environment.set(\"jwtToken\", json.token);",
+                  "} else {",
+                  "    pm.environment.unset(\"jwtToken\");",
+                  "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Me (GET)",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/auth/me",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Me (PUT update)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nickname\": \"NuovoNick\",\n  \"password\": \"NuovaPassword123\"\n}"
+            },
+            "url": "http://localhost:8080/api/auth/me"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Health & Debug",
+      "item": [
+        {
+          "name": "Health",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/health",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Debug Me",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/debug/me",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Worlds",
+      "item": [
+        {
+          "name": "Create World",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"My First World\",\n  \"description\": \"World di test per la campagna\",\n  \"isPublic\": true\n}"
+            },
+            "url": "http://localhost:8080/api/worlds"
+          }
+        },
+        {
+          "name": "List Worlds",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/worlds",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Get World By Id",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/worlds/1",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Update World",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"World aggiornata\",\n  \"description\": \"Descrizione aggiornata\"\n}"
+            },
+            "url": "http://localhost:8080/api/worlds/1"
+          }
+        },
+        {
+          "name": "Delete World",
+          "request": {
+            "method": "DELETE",
+            "url": "http://localhost:8080/api/worlds/1",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Worlds - Public",
+      "item": [
+        {
+          "name": "List Public Worlds",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/worlds/public",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Get Public World By Id",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/worlds/public/1",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Campaigns",
+      "item": [
+        {
+          "name": "Create Campaign",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"worldId\": 1,\n  \"name\": \"Campagna di Prova\",\n  \"description\": \"Prima campagna nel Mondo\",\n  \"status\": \"ACTIVE\"\n}"
+            },
+            "url": "http://localhost:8080/api/campaigns"
+          }
+        },
+        {
+          "name": "List Campaigns",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/campaigns",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Get Campaign By Id",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/campaigns/1",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Get Campaigns By World",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/campaigns/world/1",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Update Campaign",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"worldId\": 1,\n  \"name\": \"Campagna aggiornata\",\n  \"description\": \"Descrizione aggiornata\",\n  \"status\": \"ACTIVE\"\n}"
+            },
+            "url": "http://localhost:8080/api/campaigns/1"
+          }
+        },
+        {
+          "name": "Delete Campaign",
+          "request": {
+            "method": "DELETE",
+            "url": "http://localhost:8080/api/campaigns/1",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Campaign Players",
+      "item": [
+        {
+          "name": "Create Join Request",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"characterId\": 1,\n  \"message\": \"Vorrei partecipare\"\n}"
+            },
+            "url": "http://localhost:8080/api/campaigns/1/join-requests"
+          }
+        },
+        {
+          "name": "List Join Requests (GM)",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/campaigns/1/join-requests",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Get My Join Request",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/campaigns/1/my-join-request",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Approve Join Request",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/campaigns/1/join-requests/1/approve",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Reject Join Request",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/campaigns/1/join-requests/1/reject",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "List My Join Requests",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/join-requests/my",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "List Pending Requests (DM)",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/dm/join-requests",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "List Approved Players",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/campaigns/1/players",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "List My Campaign Players",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/campaign-players/my",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sessions",
+      "item": [
+        {
+          "name": "Create Session",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Sessione di Prova\",\n  \"sessionNumber\": 1,\n  \"sessionDate\": \"2024-01-01\",\n  \"notes\": \"Note della sessione\"\n}"
+            },
+            "url": "http://localhost:8080/api/campaigns/1/sessions"
+          }
+        },
+        {
+          "name": "List Sessions By Campaign",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/campaigns/1/sessions",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Get Session By Id",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/sessions/1",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Update Session",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Aggiorna sessione\",\n  \"sessionNumber\": 2,\n  \"sessionDate\": \"2024-02-01\",\n  \"notes\": \"Note aggiornate\"\n}"
+            },
+            "url": "http://localhost:8080/api/sessions/1"
+          }
+        },
+        {
+          "name": "Delete Session",
+          "request": {
+            "method": "DELETE",
+            "url": "http://localhost:8080/api/sessions/1",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Session Resources",
+      "item": [
+        {
+          "name": "Upload Resource",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": []
+                }
+              ]
+            },
+            "url": "http://localhost:8080/api/sessions/1/upload"
+          }
+        },
+        {
+          "name": "List Resources",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/sessions/1/resources",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Download Resource (With Token Param)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8080/api/resources/file/testfile.png?token={{jwtToken}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "resources",
+                "file",
+                "testfile.png"
+              ],
+              "query": [
+                {
+                  "key": "token",
+                  "value": "{{jwtToken}}"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Session Chat",
+      "item": [
+        {
+          "name": "Send Chat Message",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"content\": \"For the Seldarine\",\n  \"language\": \"ELVISH\",\n  \"senderCharacterId\": 1,\n  \"messageType\": \"IC\",\n  \"recipientUserId\": null\n}"
+            },
+            "url": "http://localhost:8080/api/sessions/1/chat/messages"
+          }
+        },
+        {
+          "name": "List Chat Messages",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/sessions/1/chat/messages",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "NPC",
+      "item": [
+        {
+          "name": "Create NPC Quick",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"worldId\": 1,\n  \"name\": \"Quick Squire\",\n  \"isVisibleToPlayers\": true\n}"
+            },
+            "url": "http://localhost:8080/api/npcs"
+          }
+        },
+        {
+          "name": "Create NPC (Full 5e)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"worldId\": 1,\n  \"name\": \"Vhalora la Vetusta\",\n  \"race\": \"Dragon\",\n  \"roleOrClass\": \"Ancient Red Dragon\",\n  \"description\": \"Boss encounter\",\n  \"gmNotes\": \"Ingresso segreto nella tana\",\n  \"isVisibleToPlayers\": false,\n  \"alignment\": \"Chaotic Evil\",\n  \"size\": \"Gargantuan\",\n  \"creatureType\": \"Dragon\",\n  \"armorClass\": 22,\n  \"maxHitPoints\": 546,\n  \"currentHitPoints\": 510,\n  \"temporaryHitPoints\": 30,\n  \"hitDice\": \"28d20 + 224\",\n  \"speed\": \"40 ft., fly 80 ft.\",\n  \"strength\": 30,\n  \"dexterity\": 10,\n  \"constitution\": 29,\n  \"intelligence\": 18,\n  \"wisdom\": 15,\n  \"charisma\": 23,\n  \"savingThrows\": \"Dex +7, Con +16, Wis +10, Cha +15\",\n  \"skills\": \"Perception +17, Stealth +7\",\n  \"damageResistances\": \"cold\",\n  \"damageImmunities\": \"fire\",\n  \"conditionImmunities\": \"frightened\",\n  \"senses\": \"blindsight 60 ft., passive Perception 27\",\n  \"languages\": \"Common, Draconic, telepathy 120 ft.\",\n  \"challengeRating\": \"24\",\n  \"experiencePoints\": 62000,\n  \"difficultyClass\": 19,\n  \"traits\": \"Legendary Resistance (3/Day).\",\n  \"actions\": \"Multiattack, Fire Breath.\",\n  \"legendaryActions\": \"Detect, Tail Attack, Wing Attack.\",\n  \"reactions\": \"Parry.\",\n  \"lairActions\": \"Volcanic tremors.\",\n  \"regionalEffects\": \"Volcanic storms.\"\n}"
+            },
+            "url": "http://localhost:8080/api/npcs"
+          }
+        },
+        {
+          "name": "List NPC",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/npcs",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Get NPC By Id",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/npcs/1",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Get NPC By World",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/npcs/world/1",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Update NPC",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"worldId\": 1,\n  \"name\": \"Vhalora aggiornata\",\n  \"race\": \"Dragon\",\n  \"roleOrClass\": \"Ancient Red Dragon\",\n  \"description\": \"Aggiornata dopo il combattimento\",\n  \"gmNotes\": \"Ferita sull'ala destra\",\n  \"isVisibleToPlayers\": false,\n  \"alignment\": \"Chaotic Evil\",\n  \"size\": \"Gargantuan\",\n  \"creatureType\": \"Dragon\",\n  \"armorClass\": 21,\n  \"maxHitPoints\": 500,\n  \"currentHitPoints\": 312,\n  \"temporaryHitPoints\": 0,\n  \"hitDice\": \"24d20 + 192\",\n  \"speed\": \"40 ft., fly 80 ft.\",\n  \"strength\": 30,\n  \"dexterity\": 10,\n  \"constitution\": 29,\n  \"intelligence\": 18,\n  \"wisdom\": 15,\n  \"charisma\": 23,\n  \"savingThrows\": \"Dex +7, Con +16, Wis +10, Cha +15\",\n  \"skills\": \"Perception +17, Stealth +7\",\n  \"damageResistances\": \"cold\",\n  \"damageImmunities\": \"fire\",\n  \"conditionImmunities\": \"frightened\",\n  \"senses\": \"blindsight 60 ft., passive Perception 27\",\n  \"languages\": \"Common, Draconic, telepathy 120 ft.\",\n  \"challengeRating\": \"23\",\n  \"experiencePoints\": 50000,\n  \"difficultyClass\": 18,\n  \"traits\": \"Legendary Resistance (3/Day).\",\n  \"actions\": \"Multiattack, Fire Breath.\",\n  \"legendaryActions\": \"Detect, Tail Attack, Wing Attack.\",\n  \"reactions\": \"Parry.\",\n  \"lairActions\": \"Magma eruptions.\",\n  \"regionalEffects\": \"Ash storms.\"\n}"
+            },
+            "url": "http://localhost:8080/api/npcs/1"
+          }
+        },
+        {
+          "name": "Delete NPC",
+          "request": {
+            "method": "DELETE",
+            "url": "http://localhost:8080/api/npcs/1",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Locations",
+      "item": [
+        {
+          "name": "Create Location",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"worldId\": 1,\n  \"parentLocationId\": null,\n  \"name\": \"Taverna\",\n  \"type\": \"Tavern\",\n  \"description\": \"Luogo pubblico\",\n  \"gmNotes\": \"Nota GM\",\n  \"isVisibleToPlayers\": true\n}"
+            },
+            "url": "http://localhost:8080/api/locations"
+          }
+        },
+        {
+          "name": "List Locations",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/locations",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Get Location By Id",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/locations/1",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Get Locations By World",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/locations/world/1",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Update Location",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"worldId\": 1,\n  \"parentLocationId\": null,\n  \"name\": \"Taverna aggiornata\",\n  \"type\": \"Tavern\",\n  \"description\": \"Descrizione aggiornata\",\n  \"gmNotes\": \"Nota GM aggiornata\",\n  \"isVisibleToPlayers\": true\n}"
+            },
+            "url": "http://localhost:8080/api/locations/1"
+          }
+        },
+        {
+          "name": "Delete Location",
+          "request": {
+            "method": "DELETE",
+            "url": "http://localhost:8080/api/locations/1",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Items",
+      "item": [
+        {
+          "name": "Create Item",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"worldId\": 1,\n  \"locationId\": null,\n  \"name\": \"Spada Luminosa\",\n  \"type\": \"weapon\",\n  \"rarity\": \"rare\",\n  \"description\": \"Oggetto pubblico\",\n  \"gmNotes\": \"Nota segreta\",\n  \"isVisibleToPlayers\": true\n}"
+            },
+            "url": "http://localhost:8080/api/items"
+          }
+        },
+        {
+          "name": "List Items",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/items",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Get Item By Id",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/items/1",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Get Items By World",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/items/world/1",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Update Item",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"worldId\": 1,\n  \"locationId\": null,\n  \"name\": \"Scudo Runico\",\n  \"type\": \"armor\",\n  \"rarity\": \"legendary\",\n  \"description\": \"Descrizione aggiornata\",\n  \"gmNotes\": \"Nota GM aggiornata\",\n  \"isVisibleToPlayers\": true\n}"
+            },
+            "url": "http://localhost:8080/api/items/1"
+          }
+        },
+        {
+          "name": "Delete Item",
+          "request": {
+            "method": "DELETE",
+            "url": "http://localhost:8080/api/items/1",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Characters",
+      "item": [
+        {
+          "name": "Create Character",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "\n{\n  \"worldId\": 1,\n  \"name\": \"Aelar\",\n  \"race\": \"Elf\",\n  \"characterClass\": \"Wizard\",\n  \"subclass\": \"Evoker\",\n  \"background\": \"Sage\",\n  \"alignment\": \"Neutral Good\",\n  \"level\": 3,\n  \"experiencePoints\": 900,\n  \"inspiration\": true,\n  \"proficiencyBonus\": 2,\n  \"strength\": 10,\n  \"dexterity\": 16,\n  \"constitution\": 14,\n  \"intelligence\": 17,\n  \"wisdom\": 12,\n  \"charisma\": 11,\n  \"strengthSaveProficient\": true,\n  \"dexteritySaveProficient\": false,\n  \"constitutionSaveProficient\": true,\n  \"intelligenceSaveProficient\": true,\n  \"wisdomSaveProficient\": false,\n  \"charismaSaveProficient\": false,\n  \"acrobaticsProficient\": true,\n  \"animalHandlingProficient\": false,\n  \"arcanaProficient\": true,\n  \"athleticsProficient\": false,\n  \"deceptionProficient\": false,\n  \"historyProficient\": true,\n  \"insightProficient\": true,\n  \"intimidationProficient\": false,\n  \"investigationProficient\": true,\n  \"medicineProficient\": false,\n  \"natureProficient\": false,\n  \"perceptionProficient\": true,\n  \"performanceProficient\": false,\n  \"persuasionProficient\": false,\n  \"religionProficient\": true,\n  \"sleightOfHandProficient\": false,\n  \"stealthProficient\": false,\n  \"survivalProficient\": false,\n  \"maxHitPoints\": 27,\n  \"currentHitPoints\": 27,\n  \"temporaryHitPoints\": 5,\n  \"armorClass\": 15,\n  \"speed\": 30,\n  \"initiativeModifier\": 2,\n  \"hitDice\": \"3d6\",\n  \"deathSaveSuccesses\": 1,\n  \"deathSaveFailures\": 0,\n  \"passivePerception\": 14,\n  \"passiveInvestigation\": 12,\n  \"passiveInsight\": 13,\n  \"personalityTraits\": \"Curious and inquisitive\",\n  \"ideals\": \"Knowledge\",\n  \"bonds\": \"Tower of the Sages\",\n  \"flaws\": \"Arrogant\",\n  \"appearance\": \"Tall elf with silver hair\",\n  \"backstory\": \"Studied evocation for decades.\",\n  \"featuresAndTraits\": \"Arcane Recovery\",\n  \"alliesAndOrganizations\": \"Harpers\",\n  \"treasure\": \"50 gp\",\n  \"otherProficiencies\": \"Thieves' tools\",\n  \"proficienciesAndLanguages\": \"Common, Elvish\",\n  \"attacksAndSpellcasting\": \"Quarterstaff +4\",\n  \"equipment\": \"Spellbook\",\n  \"spells\": \"Mage Hand\",\n  \"spellcastingClass\": \"Wizard\",\n  \"spellSaveDC\": 14,\n  \"spellAttackBonus\": 6,\n  \"knownSpells\": \"Mage Hand, Shield\",\n  \"preparedSpells\": \"Magic Missile\",\n  \"spellSlots\": \"1:4,2:2\",\n  \"otherNotes\": \"Scholar assigned to the front\",\n  \"gmNotes\": \"Secret mission\",\n  \"isVisibleToPlayers\": true\n}\n"
+            },
+            "url": "http://localhost:8080/api/characters"
+          }
+        },
+        {
+          "name": "List My Characters",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/characters/my",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Get Character By Id",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/characters/1",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Get Characters By World",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/characters/world/1",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Update Character",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "\n{\n  \"worldId\": 1,\n  \"name\": \"Aelar Updated\",\n  \"race\": \"Elf\",\n  \"characterClass\": \"Wizard\",\n  \"subclass\": \"Bladesinger\",\n  \"background\": \"Sage\",\n  \"alignment\": \"Neutral Good\",\n  \"level\": 4,\n  \"experiencePoints\": 1400,\n  \"inspiration\": false,\n  \"proficiencyBonus\": 3,\n  \"strength\": 10,\n  \"dexterity\": 18,\n  \"constitution\": 14,\n  \"intelligence\": 18,\n  \"wisdom\": 12,\n  \"charisma\": 11,\n  \"strengthSaveProficient\": true,\n  \"dexteritySaveProficient\": true,\n  \"constitutionSaveProficient\": true,\n  \"intelligenceSaveProficient\": true,\n  \"wisdomSaveProficient\": false,\n  \"charismaSaveProficient\": false,\n  \"acrobaticsProficient\": true,\n  \"arcanaProficient\": true,\n  \"maxHitPoints\": 34,\n  \"currentHitPoints\": 30,\n  \"temporaryHitPoints\": 0,\n  \"armorClass\": 17,\n  \"speed\": 30,\n  \"initiativeModifier\": 4,\n  \"hitDice\": \"4d6\",\n  \"deathSaveSuccesses\": 0,\n  \"deathSaveFailures\": 0,\n  \"passivePerception\": 15,\n  \"personalityTraits\": \"Calm\",\n  \"featuresAndTraits\": \"Bladesong\",\n  \"alliesAndOrganizations\": \"Harpers\",\n  \"attacksAndSpellcasting\": \"Longsword +7\",\n  \"spellcastingClass\": \"Wizard\",\n  \"spellSaveDC\": 15,\n  \"spellAttackBonus\": 7,\n  \"knownSpells\": \"Mage Hand, Shield, Misty Step\",\n  \"preparedSpells\": \"Haste, Fireball\",\n  \"spellSlots\": \"1:4,2:3,3:2\",\n  \"otherNotes\": \"Now acting as a frontline mage\",\n  \"gmNotes\": \"Updated mission\",\n  \"isVisibleToPlayers\": false\n}\n"
+            },
+            "url": "http://localhost:8080/api/characters/1"
+          }
+        },
+        {
+          "name": "Delete Character",
+          "request": {
+            "method": "DELETE",
+            "url": "http://localhost:8080/api/characters/1",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Session Events",
+      "item": [
+        {
+          "name": "Create Session Event",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"sessionId\": 1,\n  \"title\": \"Battaglia\",\n  \"type\": \"BATTLE\",\n  \"description\": \"Combattimento nella foresta\",\n  \"inGameTime\": \"Giorno 1\",\n  \"isVisibleToPlayers\": true\n}"
+            },
+            "url": "http://localhost:8080/api/session-events"
+          }
+        },
+        {
+          "name": "Update Session Event",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"sessionId\": 1,\n  \"title\": \"Battaglia aggiornata\",\n  \"type\": \"BATTLE\",\n  \"description\": \"Dettagli aggiornati\",\n  \"inGameTime\": \"Giorno 1, sera\",\n  \"isVisibleToPlayers\": false\n}"
+            },
+            "url": "http://localhost:8080/api/session-events/1"
+          }
+        },
+        {
+          "name": "Delete Session Event",
+          "request": {
+            "method": "DELETE",
+            "url": "http://localhost:8080/api/session-events/1",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "List Session Events",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/sessions/1/events",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Dashboard",
+      "item": [
+        {
+          "name": "Get Dashboard",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/dashboard",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwtToken}}",
+                "type": "text"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

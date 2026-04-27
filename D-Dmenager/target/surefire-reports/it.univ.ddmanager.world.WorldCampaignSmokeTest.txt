@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: it.univ.ddmanager.world.WorldCampaignSmokeTest
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.407 s -- in it.univ.ddmanager.world.WorldCampaignSmokeTest
